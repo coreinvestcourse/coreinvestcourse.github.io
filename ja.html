@@ -1,0 +1,1785 @@
+<!doctype html>
+<html lang=en>
+
+<head>
+        <meta content="width=device-width,initial-scale=1.0" name=viewport>
+        <meta content="ie=edge" http-equiv=X-UA-Compatible>
+        <meta charset=UTF-8>
+        <link crossorigin=anonymous href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css
+                integrity=sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi rel=stylesheet>
+        <script crossorigin=anonymous integrity=sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3
+                src=https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js></script>
+        <style>
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 200;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+                        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 200;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format('woff2');
+                        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 200;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2) format('woff2');
+                        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 200;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+                        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 200;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+                        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 300;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+                        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 300;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format('woff2');
+                        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 300;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2) format('woff2');
+                        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 300;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+                        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 300;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+                        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+                        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format('woff2');
+                        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2) format('woff2');
+                        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+                        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+                        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+                        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format('woff2');
+                        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2) format('woff2');
+                        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+                        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+                        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+                }
+        </style>
+        <script>(function (a, b, c, d, e, f, g) { a[c] = a[c] || function () { (a[c].q = a[c].q || []).push(arguments) }; f = b.createElement(d); f.async = 1; f.src = "https://www.clarity.ms/tag/" + e; g = b.getElementsByTagName(d)[0]; g.parentNode.insertBefore(f, g) })(window, document, "clarity", "script", "e6l2wz8xbe")</script>
+        <script>(function (a, b, c, d, e) { a.gr = a.gr || function () { a.gr.q = a.gr.q || []; a.gr.q.push(arguments) }; d = b.getElementsByTagName(c)[0]; e = b.createElement(c); e.async = true; e.src = "https://app.getreditus.com/gr.js?_ce=90"; d.parentNode.insertBefore(e, d) })(window, document, "script"); gr("track", "pageview")</script>
+        <script>window.addEventListener('DOMContentLoaded', function () { var a = document.createElement("script"); a.type = "application/javascript"; a.src = "https://api.goaffpro.com/loader.js?shop=i1npz3c1nv"; document.body.appendChild(a) })</script>
+        <style>
+                a,
+                body,
+                div,
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6,
+                li,
+                ol,
+                p,
+                span,
+                ul {
+                        font-family: "Montserrat", "Lato", "Raleway", "Roboto", "Open Sans",
+                                sans-serif !important
+                }
+        </style>
+        <link href=static/common/apple-touch-icon.png rel=apple-touch-icon sizes=180x180>
+        <link href=static/common/favicon-32x32.png rel=icon sizes=32x32 type=image/png>
+        <link href=static/common/favicon-16x16.png rel=icon sizes=16x16 type=image/png>
+        <link href=static/common/site.webmanifest rel=manifest>
+        <script>window.addEventListener("load", function () { setTimeout(function () { const a = document.getElementById("img-background"); const b = document.getElementById("first-bg-img"); const c = 2; oneImgHeight = b.clientHeight; let d = document.body; let e = document.documentElement; let f = Math.max(d.scrollHeight, d.offsetHeight, e.clientHeight, e.scrollHeight, e.offsetHeight); chunks = f / oneImgHeight; secondImg = document.createElement("img"); imgsToLoad = Math.floor(Math.min(chunks, 39)); if (imgsToLoad <= c) { return }; for (let g = c + 1; g < imgsToLoad + 1; g++) { let h = document.createElement('picture'); sourceWebp = createSource(g, 'webp', 'webp'); sourceJpeg = createSource(g, 'jpg', 'jpeg'); let i = document.createElement("img"); i.loading = "lazy"; i.classList.add("bg-img"); i.alt = "Dark background with blue accents with light reflections"; h.appendChild(sourceWebp); h.appendChild(sourceJpeg); h.appendChild(i); i.src = `static/bgs/6/${g * 1000}.jpg`; a.appendChild(h) } }, 1000) }); function createSource(a, b, c) { let d = document.createElement('source'); d.type = `image/${c}`; d.srcset = `static/bgs/6/${a * 1000}.${b}`; return d }</script>
+        <style>
+                @keyframes text-breath {
+                        0% {
+                                text-shadow: 0 0 0 #f5fbfd;
+                                filter: brightness(1)
+                        }
+
+                        50% {
+                                text-shadow: 0 0 20px #f5fbfd;
+                                filter: brightness(2)
+                        }
+
+                        100% {
+                                text-shadow: 0 0 0 #f5fbfd;
+                                filter: brightness(1)
+                        }
+                }
+
+                body {
+                        background: #031114
+                }
+
+                #img-background img {
+                        width: 100%;
+                        max-width: 100%;
+                        height: auto
+                }
+
+                a,
+                div,
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6,
+                li,
+                ol,
+                p,
+                span,
+                ul {
+                        font-family: "Montserrat", sans-serif !important;
+                        font-weight: 100;
+                        color: white !important
+                }
+
+                a {
+                        text-decoration: none !important
+                }
+
+                #main-container {
+                        transition: filter 1s;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%
+                }
+
+                .text-breath {
+                        animation: text-breath 4s ease-in-out infinite;
+                        background: rgba(0, 67, 81, .2) !important;
+                        padding: 4px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        box-shadow: 0 0 60px -15px #4e8baa;
+                        border-radius: 20px
+                }
+        </style>
+        <style>
+                .box {
+                        border: 3px solid #538cb065;
+                        border-radius: 40px;
+                        background: rgba(186, 244, 255, .13);
+                        padding: 20px;
+                        backdrop-filter: saturate(1.2);
+                        box-shadow: 0 0 60px -15px #4e8baa
+                }
+
+                .title {
+                        font-size: 4rem;
+                        font-weight: 100;
+                        color: white
+                }
+
+                .box-btn {
+                        border: 3px solid #538db0 !important;
+                        border-radius: 40px !important;
+                        background: rgba(186, 244, 255, .13) !important;
+                        padding: 7px !important;
+                        color: white !important;
+                        backdrop-filter: saturate(1.2) !important;
+                        font-weight: 300;
+                        box-shadow: 0 0 60px -15px #4e8baa;
+                        cursor: pointer !important;
+                        font-size: 1.7rem !important;
+                        transition: filter .5s, background-color .5s
+                }
+
+                .box-btn:hover {
+                        filter: brightness(1.2) saturate(1.2);
+                        background: rgba(0, 67, 81, .5) !important
+                }
+
+                .v-p {
+                        padding-top: 20px !important;
+                        padding-bottom: 20px !important
+                }
+
+                .p-6 {
+                        padding: 5vw
+                }
+        </style>
+        <link href=https://www.ambeteco.com/trading/ hreflang=x-default rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-ru hreflang=ru rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-es hreflang=es rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-de hreflang=de rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-no hreflang=nb rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-fr hreflang=fr rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-en hreflang=en rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-uk hreflang=uk rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-sv hreflang=sv rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-da hreflang=da rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-fi hreflang=fi rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-it hreflang=it rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-pl hreflang=pl rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-pt hreflang=pt rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-sq hreflang=sq rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-ar hreflang=ar rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-el hreflang=el rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-he hreflang=he rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-ja hreflang=ja rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-ko hreflang=ko rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-lb hreflang=lb rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-ms hreflang=ms rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-nl hreflang=nl rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-th hreflang=th rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-tr hreflang=tr rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-zh_hans hreflang=zh-Hans rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-zh_hant hreflang=zh-Hant rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-ja rel=canonical>
+        <meta content="
+
+投資家の第一歩 - 無料で最初のレッスンを受ける - 初心者向けコース
+15のレッスンで、実際の口座で取引を開始するために必要なすべての知識を得ることができます。コースの費用は$27.00です。今すぐ登録して、最初のレッスンを無料で受講しましょう。
+
+
+" name=description>
+        <title> トレーディングと投資の学校「Ambetecoインベストスクール」 - 学習コース </title>
+</head>
+
+<body class="container-fluid g-0">
+        <style>
+                @keyframes invisible-pane {
+                        0% {
+                                opacity: 1
+                        }
+
+                        100% {
+                                opacity: 0
+                        }
+                }
+
+                @keyframes navigation-pane-close {
+                        0% {
+                                opacity: 1
+                        }
+
+                        100% {
+                                opacity: 0
+                        }
+                }
+
+                @keyframes navigation-pane-open {
+                        from {
+                                opacity: 0
+                        }
+
+                        to {
+                                opacity: 1
+                        }
+                }
+
+                .pn-item {
+                        margin-top: 3.5vw;
+                        padding: 10px;
+                        border: 2px solid rgba(106, 124, 128, .13);
+                        border-radius: 30px;
+                        position: relative;
+                        cursor: pointer;
+                        transition: background-color .3s
+                }
+
+                .pn-item:hover {
+                        background: rgba(106, 124, 128, .13)
+                }
+
+                .navigation {
+                        display: none;
+                        backdrop-filter: blur(10px);
+                        position: absolute;
+                        white-space: nowrap;
+                        top: 50vh;
+                        left: 50vw;
+                        transform: translate(-50%, -50%);
+                        transition: opacity .3s
+                }
+
+                .product-item {
+                        margin-top: .5vw;
+                        padding: 10px;
+                        border: 2px solid rgba(106, 124, 128, .13);
+                        border-radius: 30px;
+                        position: relative;
+                        cursor: pointer;
+                        transition: background-color .3s, filter .3s
+                }
+
+                .product-item:hover {
+                        background: rgba(106, 124, 128, .33);
+                        filter: drop-shadow(0px 0 20px #538db0)
+                }
+
+                .top-item {
+                        filter: saturate(3) brightness(1.3);
+                        background: linear-gradient(to top,
+                                        rgba(81, 120, 188, .21) 0%,
+                                        rgba(72, 172, 170, .15) 97%,
+                                        rgba(72, 172, 170, .15) 100%)
+                }
+
+                .navigation-open {
+                        filter: brightness(0.7) blur(20px);
+                        user-select: none !important;
+                        pointer-events: none !important
+                }
+
+                .invisible-pane {
+                        animation: invisible-pane .3s forwards
+                }
+
+                .navigation-pane-close {
+                        animation: navigation-pane-close .3s forwards
+                }
+
+                .navigation-pane-open {
+                        animation: navigation-pane-open .3s forwards
+                }
+
+                @media screen and (max-width:768px) {
+                        .navigation {
+                                display: block;
+                                width: 90vw !important;
+                                padding-top: 13vw;
+                                padding-bottom: 13vw
+                        }
+
+                        .pn-item {
+                                margin-top: 14.5vw
+                        }
+
+                        .navigation img {
+                                width: 8vw !important;
+                                margin-right: 1.5vw !important
+                        }
+                }
+        </style>
+        <script>async function showPane(a) { allPanes = document.getElementsByClassName("navigation"); for (var b of allPanes) { if (b.id != a) { b.classList.add("invisible-pane") } }; await sleep(300); for (var b of allPanes) { if (b.id != a) { b.style.display = "none" } }; targetpane = document.getElementById(a); targetpane.classList.remove("invisible-pane"); targetpane.style.display = "block" } async function hidePane(a) { pane = document.getElementById(a); pane.classList.add("invisible-pane"); await sleep(300); pane.style.display = "none"; pane.classList.remove("invisible-pane") } async function handleNavigationMenuClick(a, b, c) { b.stopPropagation(); if (a.style.display === "none") { hideOnClickOutside(a, c); await showPane(a.id) } else { await hidePane(a.id) } } async function sleep(a) { return new Promise(b => setTimeout(b, a)) } async function hideOnClickOutside(a, b) { const c = async (e) => { if (!a.contains(e.target) && isVisible(a)) { await hidePane(a.id); if (!b) { await showPane("product-navigation") }; if (productNavigation.style.display === "none") { mainContainer = document.getElementById("main-container"); mainContainer.classList.remove("navigation-open") }; d() } }; const d = () => { document.removeEventListener("click", c) }; document.addEventListener("click", c) } const isVisible = a => !!a && !!(a.offsetWidth || a.offsetHeight || a.getClientRects().length); window.addEventListener("DOMContentLoaded", function () { var a = document.getElementById("product-navigation-btn"); productNavigation = document.getElementById("product-navigation"); if (a == null) { return }; a.onclick = function (b) { positionNavigationMenu(productNavigation); handleNavigationMenuClick(productNavigation, b, true) }; selectPageBtn = document.getElementById("select-page-btn"); selectPage = document.getElementById("select-page"); selectPageBtn.onclick = function (b) { handleNavigationMenuClick(selectPage, b, false) }; selectProductBtn = document.getElementById("select-product-btn"); selectProduct = document.getElementById("select-product"); selectProductBtn.onclick = function (b) { handleNavigationMenuClick(selectProduct, b, false) } }); function positionNavigationMenu(a) { mainContainer = document.getElementById("main-container"); mainContainer.classList.add("navigation-open") }</script>
+        <div id=main-container>
+                <div id=img-background style=position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1>
+                        <picture>
+                                <source srcset=static/bgs/6/0.webp type=image/webp>
+                                <source srcset=static/bgs/6/0.jpg type=image/jpeg><img
+                                        alt="Dark background with blue accents with light reflections" height=1000
+                                        id=first-bg-img src=static/bgs/6/0.jpg width=1920>
+                        </picture>
+                        <picture>
+                                <source srcset=static/bgs/6/1000.webp type=image/webp>
+                                <source srcset=static/bgs/6/1000.jpg type=image/jpeg><img
+                                        alt="Dark background with blue accents with light reflections" height=1000
+                                        loading=lazy src=static/bgs/6/1000.jpg width=1920>
+                        </picture>
+                        <picture>
+                                <source srcset=static/bgs/6/2000.webp type=image/webp>
+                                <source srcset=static/bgs/6/2000.jpg type=image/jpeg><img
+                                        alt="Dark background with blue accents with light reflections" height=1000
+                                        loading=lazy src=static/bgs/6/2000.jpg width=1920>
+                        </picture>
+                </div>
+                <style>
+                        #nav {
+                                background-color: transparent !important;
+                                backdrop-filter: saturate(1.1) !important;
+                                padding: 2.5vw;
+                                border-radius: 150px;
+                                box-shadow: 0 0 60px -5px #4e8baa;
+                                margin-top: 4vw;
+                                z-index: 999;
+                                background: linear-gradient(to top,
+                                                rgba(81, 120, 188, .21) 0%,
+                                                rgba(72, 172, 170, .15) 97%,
+                                                rgba(72, 172, 170, .15) 100%);
+                                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#365178bc', endColorstr='#2648acaa', GradientType=0)
+                        }
+
+                        .navbar-brand {
+                                border: 3px solid #538db0;
+                                border-radius: 100%;
+                                background: rgba(186, 244, 255, .13);
+                                width: 9vw;
+                                padding: 20px;
+                                text-align: center;
+                                position: relative;
+                                margin-left: 6vw
+                        }
+
+                        .navbar-brand::before {
+                                border-radius: 100%;
+                                content: "";
+                                box-shadow: 0 0 60px 10px #004a49;
+                                mix-blend-mode: soft-light;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%
+                        }
+
+                        .nav-item {
+                                border: 3px solid #538db0;
+                                border-radius: 40px;
+                                background: rgba(186, 244, 255, .13);
+                                padding: 0;
+                                cursor: pointer;
+                                text-align: center;
+                                padding-left: 30px;
+                                padding-right: 30px;
+                                position: relative;
+                                margin-left: .5vw;
+                                margin-right: .5vw;
+                                transition: filter .5s, background-color .5s
+                        }
+
+                        .nav-item:hover {
+                                filter: brightness(1.2) saturate(1.2);
+                                background: rgba(0, 67, 81, .5) !important
+                        }
+
+                        .nav-item::before {
+                                border-radius: 40px;
+                                content: "";
+                                z-index: -1;
+                                box-shadow: 0 0 60px 10px #004a49;
+                                mix-blend-mode: soft-light;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%
+                        }
+
+                        .nav-item a {
+                                font-size: 1.6rem;
+                                font-weight: 200;
+                                margin: 0;
+                                padding: 6px;
+                                white-space: nowrap;
+                                border: none !important
+                        }
+
+                        #nav-ul {
+                                margin-left: 6vw
+                        }
+
+                        .dropdown-menu {
+                                background: rgba(186, 244, 255, .13);
+                                border-radius: 40px;
+                                padding: 20px;
+                                margin-top: 10px !important
+                        }
+
+                        .dropdown-menu a {
+                                font-size: 1.3rem !important
+                        }
+
+                        .dropdown-item {
+                                transition: background-color .5s;
+                                border-radius: 30px
+                        }
+
+                        .dropdown-item:hover {
+                                background: rgba(0, 67, 81, .5) !important
+                        }
+
+                        @media screen and (min-width:1200px) and (max-width:1211px) {
+                                .nav-item {
+                                        margin-top: 1vw;
+                                        margin-bottom: 1vw
+                                }
+                        }
+
+                        @media screen and (max-width:1199.98px) {
+                                #nav {
+                                        border-radius: 50px
+                                }
+
+                                .navbar-toggler {
+                                        position: absolute;
+                                        top: 14vw;
+                                        left: 10vw
+                                }
+
+                                .nav-item {
+                                        margin-top: 4vw
+                                }
+
+                                .navbar-brand img {
+                                        width: 20vw !important;
+                                        position: absolute;
+                                        left: 50%;
+                                        top: 50%;
+                                        transform: translate(-50%, -50%)
+                                }
+
+                                .navbar-brand {
+                                        margin-right: auto !important;
+                                        margin-left: auto !important;
+                                        width: 32vw !important;
+                                        height: 32vw;
+                                        position: relative
+                                }
+
+                                .dropdown-menu {
+                                        margin-bottom: 6vw !important
+                                }
+
+                                #product-navigation-btn img {
+                                        width: 8.5vw !important
+                                }
+                        }
+
+                        @media screen and (min-width:1000px) and (max-width:1211px) {
+                                .navbar-brand img {
+                                        width: 10vw !important
+                                }
+
+                                .navbar-brand {
+                                        width: 16vw !important;
+                                        height: 16vw
+                                }
+
+                                .navbar-toggler {
+                                        position: absolute;
+                                        top: 8vw;
+                                        left: 10vw
+                                }
+                        }
+
+                        @media screen and (min-width:750px) and (max-width:1001px) {
+                                .navbar-brand img {
+                                        width: 14vw !important
+                                }
+
+                                .navbar-brand {
+                                        width: 20vw !important;
+                                        height: 20vw
+                                }
+
+                                .navbar-toggler {
+                                        position: absolute;
+                                        top: 10vw;
+                                        left: 10vw
+                                }
+                        }
+                </style>
+                <nav class="navbar navbar-expand-xl navbar-dark bg-dark col-11 col-md-11 mx-auto" id=nav>
+                        <div class=container-fluid><a class=navbar-brand href= />
+                                <picture>
+                                        <source srcset="static/ambeteco_logo.webp
+        " type=image/webp>
+                                        <source srcset="static/ambeteco_logo.png
+        " type=image/png><img alt="Logo of Ambeteco - A new look at software" src=static/common/ambeteco_logo.png
+                                                style=max-width:100%;max-height:100%;border-radius:0!important;width:7vw;text-align:center>
+                                </picture> </a><button aria-label="Toggle navigation"
+                                        aria-controls=navbarSupportedContent aria-expanded=false class=navbar-toggler
+                                        data-bs-target=#navbarSupportedContent data-bs-toggle=collapse type=button><span
+                                                class=navbar-toggler-icon></span></button>
+                                <div class="collapse navbar-collapse" id=navbarSupportedContent>
+                                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 row mx-auto" id=nav-ul>
+                                                <li class="col nav-item"><a class=nav-link href="/">main</a></li>
+                                                <li class="col nav-item"><a class=nav-link href="/contact">contact</a>
+                                                </li>
+                                                <li class="col nav-item"><a class=nav-link href="/enroll">enroll</a>
+                                                </li>
+                                        </ul>
+                                        </li>
+                                        </ul>
+                                </div>
+                        </div>
+                </nav>
+                <div class="container-fluid g-5 p-5" id=fluid-cont style=margin-bottom:5vw;margin-top:3vw>
+                        <style>
+                                #lesson-body p {
+                                        font-weight: 300 !important;
+                                        margin-bottom: .5rem !important;
+                                        font-size: 1.1rem
+                                }
+
+                                #lesson-body .highlight {
+                                        font-weight: 600;
+                                        text-shadow: 0 3px 10px white;
+                                        transition: text-shadow .5s
+                                }
+
+                                #lesson-body .highlight:hover {
+                                        text-shadow: 0 0 0 white
+                                }
+
+                                #lesson-body .term {
+                                        box-shadow: 0 3px 20px -10px white;
+                                        transition: box-shadow .5s;
+                                        background: #132937;
+                                        border: 1px #538db0 solid;
+                                        color: white !important;
+                                        padding: 4px;
+                                        font-weight: 600;
+                                        border-radius: 10px;
+                                        margin-right: 4px;
+                                        margin-left: 4px
+                                }
+
+                                #lesson-body .term:hover {
+                                        box-shadow: 0 3px 20px 5px #538db0
+                                }
+
+                                .minus-badge {
+                                        padding-left: 1rem;
+                                        padding-right: 1rem;
+                                        padding-bottom: .3rem;
+                                        border-radius: 50%;
+                                        font-size: 2rem;
+                                        font-weight: 700;
+                                        background: #8f8f8f;
+                                        opacity: .7
+                                }
+
+                                .plus-badge {
+                                        padding: .6rem 1rem;
+                                        opacity: .7;
+                                        background: #538db0;
+                                        font-weight: 700;
+                                        border-radius: 50%;
+                                        font-size: 1.2rem
+                                }
+
+                                .checkmark-main {
+                                        opacity: 1 !important
+                                }
+
+                                #lesson-body {
+                                        transition: 1s background-color;
+                                        padding: 3rem !important
+                                }
+
+                                .config-btn {
+                                        padding: 0vw .55vw !important;
+                                        cursor: pointer !important
+                                }
+
+                                #contrast-indicator {
+                                        transition: 1s width
+                                }
+
+                                #lesson-body img {
+                                        max-width: 100%;
+                                        width: 100%;
+                                        border-radius: 60px !important;
+                                        margin-top: 5rem;
+                                        margin-bottom: 5rem
+                                }
+
+                                .landing-img img {
+                                        width: 100%;
+                                        border-radius: 60px !important;
+                                        filter: drop-shadow(-20px 15px 30px #feb46f) drop-shadow(20px -15px 30px #136962)
+                                }
+
+                                .landing-img {
+                                        margin-top: 4vw;
+                                        margin-bottom: 4vw
+                                }
+
+                                .theme-box p {
+                                        margin: 0 !important
+                                }
+
+                                .theme-box {
+                                        border-radius: 40px;
+                                        background: rgba(186, 244, 255, .13);
+                                        backdrop-filter: saturate(1.2);
+                                        box-shadow: 0 0 60px -15px #4e8baa;
+                                        font-size: 1.5rem;
+                                        padding: 1.4rem;
+                                        margin-top: .8rem;
+                                        margin-bottom: .8rem;
+                                        padding-left: 1rem
+                                }
+
+                                .dot {
+                                        font-weight: 900
+                                }
+
+                                .landing-word-box {
+                                        border-radius: 40px;
+                                        background: rgba(186, 244, 255, .13);
+                                        backdrop-filter: saturate(1.2);
+                                        margin-top: .5rem;
+                                        padding-left: 1rem;
+                                        padding-right: 1rem;
+                                        display: inline-block;
+                                        margin-right: .4rem;
+                                        white-space: nowrap
+                                }
+
+                                .score {
+                                        border: 3px solid #538db0 !important;
+                                        border-radius: 40px !important;
+                                        background: rgba(186, 244, 255, .13) !important;
+                                        padding: 7px !important;
+                                        color: white !important;
+                                        backdrop-filter: saturate(1.2) !important;
+                                        font-weight: 300;
+                                        box-shadow: 0 0 60px -15px #4e8baa;
+                                        font-size: 1.7rem !important;
+                                        transition: filter .5s, background-color .5s;
+                                        display: inline-block
+                                }
+
+                                .email {
+                                        font-weight: 500;
+                                        word-wrap: anywhere
+                                }
+
+                                .table {
+                                        --bs-table-color: #fff;
+                                        --bs-table-bg: rgba(186, 244, 255, .13);
+                                        --bs-table-border-color: rgba(186, 244, 255, .13);
+                                        --bs-table-striped-bg: rgba(186, 244, 255, .13);
+                                        --bs-table-striped-color: #fff;
+                                        --bs-table-active-bg: rgba(186, 244, 255, .13);
+                                        --bs-table-active-color: #fff;
+                                        --bs-table-hover-bg: rgba(186, 244, 255, .13);
+                                        --bs-table-hover-color: #fff
+                                }
+
+                                .table-selected {
+                                        background: rgba(0, 168, 202, .324) !important;
+                                        font-weight: 500
+                                }
+
+                                .table> :not(caption)>*>* {
+                                        border-bottom-width: 0 !important
+                                }
+
+                                .table th[scope] {
+                                        padding-left: 2rem
+                                }
+
+                                .pricing-card {
+                                        border: 3px solid #538db0;
+                                        border-radius: 40px;
+                                        background: rgba(186, 244, 255, .13);
+                                        padding: 20px;
+                                        backdrop-filter: saturate(1.2);
+                                        box-shadow: 0 0 60px -15px #4e8baa;
+                                        margin: 1vw
+                                }
+
+                                .pricing-card p {
+                                        margin-bottom: .8rem
+                                }
+
+                                .pricing-btn {
+                                        display: block;
+                                        text-align: center
+                                }
+
+                                #deluxe-card p {
+                                        margin-bottom: .4rem
+                                }
+
+                                @media screen and (max-width:768px) {
+                                        #lesson-body .term {
+                                                margin-bottom: 0;
+                                                margin-top: 0;
+                                                display: inline-block
+                                        }
+
+                                        #lesson-body {
+                                                padding: 8vw !important;
+                                                padding-top: 10vw !important;
+                                                padding-bottom: 10vw !important
+                                        }
+
+                                        .theme-box {
+                                                font-size: 1rem
+                                        }
+
+                                        #fluid-cont {
+                                                padding: 4vw !important
+                                        }
+                                }
+
+                                @media screen and (max-width:1023px) {
+                                        .pricing-card {
+                                                margin-top: 3rem
+                                        }
+                                }
+                        </style>
+                        <div class="box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto p-4"
+                                style="background:rgba(0,0,0,.2);border:0 solid #538db0;border-radius:60px"
+                                id=lesson-body>
+                                <div>
+                                        <p>
+                                        <h1 class="mb-4 lesson-title">オンラインスクール "Ambeteco-インベストスクール"</h1>
+                                        <p>私たちのコースの内容 <span class=highlight> 15レッスン。 </span> あなたは、最初のレッスンを受ける <span
+                                                        class=highlight> 絶対に無料で。 </span></p>
+                                        <p>あなたは何もリスクを負いません：あなたは、あなたがこの種の職業に興味があるかどうかを自分で理解するために、試して取得し、あなたが得ることができる知識はあなたのままになると同時に、自己啓発の新しいレベルに移動します
+                                                - このすべては、シンボリック価格です！
+                                                15レッスンの間に、あなたは投資/トレーディングを開始するために必要なすべての知識を得ることができます。</p>
+                                </div>
+                        </div>
+                        <div class="landing-img col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <picture>
+                                        <source srcset=static/lesson_imgs/start/0.webp type=image/webp>
+                                        <source srcset=static/lesson_imgs/start/0.jpg type=image/jpeg><img
+                                                alt="Photo of night city in pink-blue colors"
+                                                style="filter:drop-shadow(-20px 15px 30px #112484) drop-shadow(20px -15px 30px #a45b78)"
+                                                src=static/lesson_imgs/start/0.jpg>
+                                </picture>
+                        </div>
+                        <div class="box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto p-4"
+                                style="background:rgba(0,0,0,.2);border:0 solid #538db0;border-radius:60px"
+                                id=lesson-body>
+                                <p>15回のレッスンで、あなたは投資/トレーディングを始めるために必要なすべての知識を得ることができます。 <span class=highlight>
+                                                実際の取引で（デモではありません！）。 </span> 口座で</p>
+                                <p>このテーマに関する予備知識は必要ありません。すべての基本的な概念、ルール、および用語は、簡単な形であなたに提示されます。</p>
+                                <p>私たちのコースを学習した後、あなたは理解することができる十分な量の知識を得ることができます。 <span class=highlight> 株式市場の仕組み
+                                        </span> また、その行動に影響を与えるすべての理由を理解することができます。</p>
+                        </div>
+                        <div class="landing-img col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <picture>
+                                        <source srcset=static/lesson_imgs/start/1.webp type=image/webp>
+                                        <source srcset=static/lesson_imgs/start/1.jpg type=image/jpeg><img
+                                                alt="Photo of a city in cyan-yellow colors" loading=lazy
+                                                src=static/lesson_imgs/start/1.jpg>
+                                </picture>
+                        </div>
+                        <div class="box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto p-4"
+                                style="background:rgba(0,0,0,.2);border:0 solid #538db0;border-radius:60px"
+                                id=lesson-body>
+                                <p>私たちのコースは、人々の様々なグループのために興味深いものになります：すべての人のための取引や株式市場や他の有価証券への投資を試してみたいが、それを行う方法を知らないか、それをやって起動することを恐れていた。
+                                </p>
+                                <p>あなたは、フォームに入力した後、アクセスすることができます <span class=highlight> 初回無料レッスン </span> にアクセスできます。</p>
+                                <p>勉強の過程では、次のようなことを取り上げます。 <span class=highlight> のトピックをご紹介します。 </span></p>
+                        </div>
+                        <h1 class="text-center mt-5 mb-4">トレーニングコースのトピックのリスト。</h1>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> NYSE、NASDAQ、AMEX、LSE - それが何であるか、どのように機能するか。</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> トレーディングと投資の基礎 - ポジションを開くための基本的な知識。</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> トレーダーの第一歩 - トレーディングについて知っておくべきすべてのこと。</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> トレーダーに必要な基本的な知識 - Bid, Ask, Spread, Mid, Volume, Last,
+                                        Close, Low, High, Avg. 価格</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> 情報を見つけるためのオンラインリソース - どのように連携するか。</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> 適切な銘柄を見つける方法の説明 - 私たちの普遍的なソリューション。</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> 企業報告とは何か、そしてそれをどのように有利に使うか。</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> 株式とその仕組み - CFDとの比較。</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> 安全なポジションのための公式、または損失から身を守る方法。</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> 先物、ファンド、インデックス-それらが株式の動きにどのように影響するか、そしてどのように自分を守るか。</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> 株の仲間 - 何のためにいるのか、どうすればいいのか、どうすれば見つけられるのか？</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> 注文書と注文ティッカーの読み方を知る - プロにとって最も重要なスキルの一つであり、それがいかにトレーダーを救うか..;
+                                </p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> テクニカル分析の基本 - サポートとレジスタンス、その扱い方。</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> 会社の株主-株主と友達になる方法、株主が教えてくれること、株主と一緒にお金を稼ぐ方法。</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> "マジックナンバー "とは何か、そしてそれをどのように収入につなげるか。</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> 取引の心理学：私たちの脳の罠。</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> 株の方向性を見極める方法と、それを助けてくれるのは誰なのか。</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> いつ買い、いつ売るか - すべてのトレーダーと投資家の疑問。</p>
+                        </div>
+                        <h1 class="text-center mt-5 mb-5">そして、これは私たちのトピックの完全なリストではありません。</h1>
+                        <div class="landing-img col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <picture>
+                                        <source srcset=static/lesson_imgs/start/sup.webp type=image/webp>
+                                        <source srcset=static/lesson_imgs/start/sup.jpg type=image/jpeg><img
+                                                alt="An illustration of technical analysis"
+                                                style="filter:drop-shadow(-20px 15px 30px #3e2737) drop-shadow(20px -15px 30px #d98c7c)"
+                                                loading=lazy src=static/lesson_imgs/start/sup.jpg>
+                                </picture>
+                        </div>
+                        <div class="box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto p-4"
+                                style="background:rgba(0,0,0,.2);border:0 solid #538db0;border-radius:60px"
+                                id=lesson-body>
+                                <p>このコースを修了すると、実際の口座で取引所取引を行うために必要な知識を得ることができます。
+                                        すべての投資家がこれらの言葉を知っておくべき理由と、毎日の取引で必要とされる理由を学ぶことができます。</p>
+                        </div>
+                        <div class="col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto mt-5 mb-5"
+                                style=line-height:3.5;word-break:break-all>
+                                <div class=landing-word-box>NASDAQ</div>
+                                <div class=landing-word-box>AMEX</div>
+                                <div class=landing-word-box>NYSE</div>
+                                <div class=landing-word-box>LSE</div>
+                                <div class=landing-word-box>Diversification</div>
+                                <div class=landing-word-box>Ticker</div>
+                                <div class=landing-word-box>Long</div>
+                                <div class=landing-word-box>Short</div>
+                                <div class=landing-word-box>Gap</div>
+                                <div class=landing-word-box>Insiders</div>
+                                <div class=landing-word-box>Stop-loss</div>
+                                <div class=landing-word-box>Loosers</div>
+                                <div class=landing-word-box>Hedge-fund</div>
+                                <div class=landing-word-box>Brockers</div>
+                                <div class=landing-word-box>Dividends</div>
+                                <div class=landing-word-box>Brokers</div>
+                                <div class=landing-word-box>Listing</div>
+                                <div class=landing-word-box>The Fed</div>
+                                <div class=landing-word-box>52-weeks</div>
+                                <div class=landing-word-box>CPI</div>
+                                <div class=landing-word-box>GDP</div>
+                                <div class=landing-word-box>SPAC</div>
+                                <div class=landing-word-box>P&L</div>
+                                <div class=landing-word-box>Average Price</div>
+                                <div class=landing-word-box>Bid</div>
+                                <div class=landing-word-box>Ask</div>
+                                <div class=landing-word-box>Spread</div>
+                                <div class=landing-word-box>Mid</div>
+                                <div class=landing-word-box>Volume</div>
+                                <div class=landing-word-box>Last</div>
+                                <div class=landing-word-box>Close</div>
+                                <div class=landing-word-box>Low</div>
+                                <div class=landing-word-box>High</div>
+                        </div>
+                        <div class="box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto p-4"
+                                style="background:rgba(0,0,0,.2);border:0 solid #538db0;border-radius:60px"
+                                id=lesson-body>
+                                <p>また、米国と英国の株式市場で取引されている有名な多くの企業を見ていきます。また、米国と英国の株式市場で取引されている有名な企業を例として取り上げ、そのチャートを分析し、その行動を分析します。
+                                </p>
+                        </div>
+                        <div class="col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto mt-5 mb-5"
+                                style=line-height:3.5;word-break:break-all><a
+                                        href="https://www.google.com/search?client=firefox-b-d&q=quote+GOOG"
+                                        rel=noopener target=_blank>
+                                        <div class=landing-word-box>Google [GOOG]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+TSLA" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Tesla [TSLA]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+AMZN" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Amazon [AMZN]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+NFLX" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Netflix [NFLX]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+F" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Ford [F]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+AAPL" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Apple [AAPL]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+JNJ" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Johnson & Johnson [JNJ]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+V" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Visa [V]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+MA" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>MasterCard [MA]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+META" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Meta (Facebook) [META]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+MSFT" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Microsoft [MSFT]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+AMD" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Amd [AMD]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+NVDA" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Nvidia [NVDA]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+MU" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Micron [MU]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+CVX" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Chevron [CVX]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+PG" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Proctor & Gamble [PG]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+INTC" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Intel [INTC]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+GE" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>General Electic [GE]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+VOD" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Vodafone [VOD]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+C" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>City Bank [C]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+GM" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>General Motors [GM]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+WFC" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Wells Fargo [WFC]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+CMA" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Comerica [CMA]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+BCS" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Barclays [BCS]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+JPM" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>JPMorgan Chase [JPM]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+BAC" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Bank of America [BAC]</div>
+                                </a></div>
+                        <div class="landing-img col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <picture>
+                                        <source srcset=static/lesson_imgs/start/2.webp type=image/webp>
+                                        <source srcset=static/lesson_imgs/start/2.jpg type=image/jpeg><img
+                                                alt="A photo of a laptop, a table, and a phone on a table, showing charts and trading platforms"
+                                                style="filter:drop-shadow(-20px 15px 30px #091468) drop-shadow(20px -15px 30px #ff061c82)"
+                                                loading=lazy src=static/lesson_imgs/start/2.jpg>
+                                </picture>
+                        </div>
+                        <div class="box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto p-4"
+                                style="background:rgba(0,0,0,.2);border:0 solid #538db0;border-radius:60px"
+                                id=lesson-body>
+                                <p>最初のレッスンの勉強を終えて <span class=highlight> (完全に無料です) </span>
+                                        そして、あなたが教育の私たちの方法を理解するとき、おそらくあなたは全体のコースに興味を持つことになります。 <span class=highlight>
+                                                14レッスン。 </span> お支払いを済まされますと、お好きなグループでのレッスンが受けられます。 <span
+                                                class=highlight> フルコースにアクセスします。 </span>
+                                        このコースは、私たちのウェブサイトから直接購入することができます。 <span class=highlight> ボタンをクリックしてください。 </span>
+                                </p>
+                                <p>支払いプロセスにはあまり時間がかかりません。私たちのサービスは非常に簡単に構成されており、暗号化されており、我々は手数料やコミッションなしで、支払いのために任意のカードを受け入れる！だから、あなたは私たちのコースを試してみる機会を持っている。
+                                </p>
+                                <p>だから、あなたは、手頃な価格で優れた高品質の製品を試してみる機会があります。 <span class=highlight> をお試しいただけます。 </span></p>
+                        </div>
+                        <div class="box mt-5 col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto p-4"
+                                style="background:rgba(0,0,0,.2);border:0 solid #538db0;border-radius:60px"
+                                id=lesson-body>
+                                <p>現在、3つのグループが登録可能です。 <span class=highlight>エコノミー、スタンダート、デラックス</span></p><br>
+                                <p><span class=highlight>経済」パッケージの価格：「経済」パッケージでは、コースへのアクセスが可能です。</span>
+                                        コースにアクセスするだけで、自分で好きなように動けます。自分で考えて行動するのが好きな人に向いています。
+                                        自分で考えて行動したい方におすすめです。経済」パッケージでは、宿題や相談、著者とのコミュニケーションはなく、コースへのアクセスのみとなります。
+                                        コースにアクセスするだけです。<br> - 経済」パッケージの価格。 <br> <span style=font-weight:700>Limited time
+                                                offer: </span> <span
+                                                style="box-shadow:0 3px 20px -10px white;transition:box-shadow .5s;background:#132937;border:1px #538db0 solid;color:white!important;padding:4px;font-weight:600;border-radius:10px;margin-right:4px;margin-left:4px;white-space:pre!important">$27.00</span>
+                                        <br> <span style=font-weight:700> <s>$42.00</s> Save 35% </span></p><br>
+                                <p><span class=highlight>Standart "パッケージの料金： "Standart "パッケージの料金</span>
+                                        コースへのアクセスに加え、コース終了後に著者との個別質疑応答が1回あります。 コース終了後に、著者との個別Q&Aセッションがあります。
+                                        コース中に生じた疑問点を質問することができます。 <br> - Standart "パッケージの価格。 <span
+                                                style=font-weight:700>$47.00</span></p><br>
+                                <p><span class=highlight>Deluxe "パッケージでは、"Economy "と "Standart
+                                                "に含まれるすべてのものが手に入り、さらに、以下のものが手に入ります。</span><br> <span class=dot>•</span>
+                                        著者との個別相談<br> <span class=dot>•</span> 宿題のチェック<br> <span class=dot>•</span>
+                                        パーソナルメンター。<br> <span class=dot>•</span> 学習中のコース作成者との直接のコミュニケーション<br> <span
+                                                class=dot>•</span> 学校創設者のサイン入り個人証明書<br> <span class=dot>•</span>
+                                        オプションの終了テスト（進捗状況を確認できる証明書付き）。<br> <span class=dot>•</span>
+                                        コース終了後のコミュニケーションサポート<br> <span style=font-weight:700>- デラックス
+                                                "パッケージの価格：99.99ドル</span></p><br>
+                                <p>スクールへの入学には、フォームへの入力が必要です。支払い後、登録時に指定したメールアドレスに、すぐにコースへのアクセスが可能になります。</p>
+                        </div>
+                        <div class="col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto" style=margin-top:5vw>
+                                <h1 class="text-center mt-5 mb-3">サインアップして最初のレッスンを無料で受けましょう。</h1>
+                                <h5>フォームに入力すると、最初のレッスンがあなたのEメールに即座に届きます!
+                                        無料レッスンを受けた後、教材やレッスンのスタイルが気に入ったかどうか、全コースを学習するのが面白いかどうかなどを理解することができます。もし気に入ったのであれば、残りの14レッスンの料金を支払うだけです。これは、私たちのサイト上でオンライン決済を行うことで可能です。
+                                </h5>
+                        </div><a href=/enroll/ja#econom>
+                                <div class="col-12 col-sm-8 col-md-7 box-btn mx-auto mt-5 text-center"
+                                        style=padding-top:15px!important;padding-bottom:15px!important>初回レッスン無料 [econom]
+                                </div>
+                        </a><a href=/enroll/ja#standart>
+                                <div class="col-12 col-sm-8 col-md-7 box-btn mx-auto mt-4 text-center"
+                                        style=padding-top:15px!important;padding-bottom:15px!important>初回レッスン無料
+                                        [standart]</div>
+                        </a><a href=/enroll/ja#deluxe>
+                                <div class="col-12 col-sm-8 col-md-7 box-btn mx-auto mt-4 text-center"
+                                        style=padding-top:15px!important;padding-bottom:15px!important>初回レッスン無料 [deluxe]
+                                </div>
+                        </a>
+                        <div class="col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto" style=margin-top:7vw>
+                                <h1 class="text-center mt-5 mb-3">Ambeteco Invest-School:<br> 初心者のための最高のトレーディングコースです。
+                                </h1>
+                                <h4 class="text-center mb-5">
+                                        個人的な指導者、コース作成者とのコミュニケーション、宿題のチェックなど、株式市場での実際の取引に必要な知識はすべて提供します。</h4>
+                                <h2 class="text-center mb-4" style=margin-top:7vw>各トレーディングコースの特徴比較</h2>
+                                <div class=d-lg-none>
+                                        <h4 class="text-center mb-4 mt-5">表を見るには、指で水平方向にスクロールしてください。</h4>
+                                </div>
+                                <div class=table-responsive-lg>
+                                        <table class="table table-dark table-striped">
+                                                <thead>
+                                                        <tr class=align-middle>
+                                                                <th style="border-radius:40px 0 0 0;padding-left:0"
+                                                                        scope=col></th>
+                                                                <th class="table-selected text-center"
+                                                                        style=font-weight:900;padding:1.5rem;font-size:1.2rem>
+                                                                        Ambeteco Invest-School</th>
+                                                                <th style=padding-left:1.5rem;opacity:.8>
+                                                                        InvestorsUndergound</th>
+                                                                <th
+                                                                        style="padding-right:1.5rem;opacity:.8;border-radius:0 40px 0 0">
+                                                                        ThomasKralow</th>
+                                                        </tr>
+                                                </thead>
+                                                <tbody>
+                                                        <tr class=align-middle>
+                                                                <th scope=row>無料レッスン・体験</th>
+                                                                <td class="table-selected text-center">
+                                                                        <div class="mb-3 mt-3"><span
+                                                                                        class="plus-badge checkmark-main">✓</span>
+                                                                        </div> 誰でも絶対に無料のレッスン
+                                                                </td>
+                                                                <td class=text-center><span class=minus-badge>-</span>
+                                                                </td>
+                                                                <td class=text-center><span class=minus-badge>-</span>
+                                                                </td>
+                                                        </tr>
+                                                        <tr class=align-middle>
+                                                                <th scope=row>パーソナルメンター</th>
+                                                                <td class="table-selected text-center">
+                                                                        <div class="mb-3 mt-3"><span
+                                                                                        class="plus-badge checkmark-main">✓</span>
+                                                                        </div>
+                                                                        あなただけのパーソナルチューターがおり、トレーニングについて相談することができます。
+                                                                </td>
+                                                                <td class=text-center><span class=minus-badge>-</span>
+                                                                </td>
+                                                                <td class=text-center><span class=plus-badge>✓</span>
+                                                                </td>
+                                                        </tr>
+                                                        <tr class=align-middle>
+                                                                <th scope=row>コース創設者と直接コンタクト</th>
+                                                                <td class="table-selected text-center">
+                                                                        <div class="mb-3 mt-3"><span
+                                                                                        class="plus-badge checkmark-main">✓</span>
+                                                                        </div> スクールの創設者であり、コースの著者と直接コンタクトを取ることができます。
+                                                                </td>
+                                                                <td class=text-center><span class=minus-badge>-</span>
+                                                                </td>
+                                                                <td class=text-center><span class=plus-badge>✓</span>
+                                                                </td>
+                                                        </tr>
+                                                        <tr class=align-middle>
+                                                                <th scope=row>コース作成者と1対1のコンサルティング</th>
+                                                                <td class="table-selected text-center">
+                                                                        <div class="mb-3 mt-3"><span
+                                                                                        class="plus-badge checkmark-main">✓</span>
+                                                                        </div> 学校創設者、コース作成者と個別に質疑応答ができます。
+                                                                </td>
+                                                                <td class=text-center><span class=minus-badge>-</span>
+                                                                </td>
+                                                                <td class=text-center><span class=minus-badge>-</span>
+                                                                </td>
+                                                        </tr>
+                                                        <tr class=align-middle>
+                                                                <th scope=row>学習する取引所</th>
+                                                                <td class="table-selected text-center">
+                                                                        <div class="mb-3 mt-3"><span
+                                                                                        class="plus-badge checkmark-main">✓</span>
+                                                                        </div>
+                                                                        以下の5つの取引所を学習します。NYSE、NASDAQ、AMEX、PINK（OTC）、LSE。
+                                                                </td>
+                                                                <td class=text-center><span class=plus-badge
+                                                                                style=background:#8f8f8f;opacity:.7>1</span>
+                                                                </td>
+                                                                <td class=text-center><span class=plus-badge
+                                                                                style=background:#8f8f8f;opacity:.7>1</span>
+                                                                </td>
+                                                        </tr>
+                                                        <tr class=align-middle>
+                                                                <th scope=row>宿題のチェック</th>
+                                                                <td class="table-selected text-center">
+                                                                        <div class="mb-3 mt-3"><span
+                                                                                        class="plus-badge checkmark-main">✓</span>
+                                                                        </div> 個人チューターが宿題をチェックし、質問にお答えします。
+                                                                </td>
+                                                                <td class=text-center><span class=minus-badge>-</span>
+                                                                </td>
+                                                                <td class=text-center><span class=plus-badge>✓</span>
+                                                                </td>
+                                                        </tr>
+                                                        <tr class=align-middle>
+                                                                <th scope=row>学校の卒業生と連絡を取り合う</th>
+                                                                <td class="table-selected text-center">
+                                                                        <div class="mb-3 mt-3"><span
+                                                                                        class="plus-badge checkmark-main">✓</span>
+                                                                        </div> コース終了後も、メンターと連絡を取ることができます。
+                                                                </td>
+                                                                <td class=text-center><span class=minus-badge>-</span>
+                                                                </td>
+                                                                <td class=text-center><span class=minus-badge>-</span>
+                                                                </td>
+                                                        </tr>
+                                                        <tr class=align-middle>
+                                                                <th scope=row>修了証書の発行</th>
+                                                                <td class="table-selected text-center">
+                                                                        <div class="mb-3 mt-3"><span
+                                                                                        class="plus-badge checkmark-main">✓</span>
+                                                                        </div> 著者と学校創設者のサイン入り個人証明書を発行します。
+                                                                </td>
+                                                                <td class=text-center><span class=minus-badge>-</span>
+                                                                </td>
+                                                                <td class=text-center><span class=minus-badge>-</span>
+                                                                </td>
+                                                        </tr>
+                                                        <tr class=align-middle>
+                                                                <th scope=row>試験・終了テスト</th>
+                                                                <td class="table-selected text-center">
+                                                                        <div class="mb-3 mt-3"><span
+                                                                                        class="plus-badge checkmark-main">✓</span>
+                                                                        </div>
+                                                                        オプションで、修了テストを受け、トレーニングプログラムの合格証を追加で受け取ることができます。
+                                                                </td>
+                                                                <td class=text-center><span class=minus-badge>-</span>
+                                                                </td>
+                                                                <td class=text-center><span class=plus-badge>✓</span>
+                                                                </td>
+                                                        </tr>
+                                                        <tr class="align-middle text-center">
+                                                                <th style="border-radius:0 0 0 40px;padding-top:1rem;padding-bottom:1rem"
+                                                                        scope=row>価格</th>
+                                                                <td class=table-selected><span
+                                                                                style=font-weight:bold;font-size:1.3rem>
+                                                                                27.00ドルから100ドル </span></td>
+                                                                <td>$997</td>
+                                                                <th style="border-radius:0 0 40px 0;font-weight:100">
+                                                                        $899
+                                                        </tr>
+                                                </tbody>
+                                        </table>
+                                </div>
+                                <p>2022年現在、公開されている情報より引用しています。他のコースの情報は、その所有者によって変更されることがあります。当校の上記オプションの中には、「デラックス」パッケージでしか利用できないものがあります。
+                                </p>
+                        </div>
+                        <div class="col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto" id=pricing-block
+                                style=margin-top:10vw>
+                                <div class=row style=align-items:end>
+                                        <div class="pricing-card col-12 col-lg" style=height:fit-content>
+                                                <h4 class=text-center>Econom</h4>
+                                                <h1 class="text-center mt-2" style=font-weight:300><s>$42.00</s> <span
+                                                                style="text-shadow:0 0 10px white;font-weight:700">$27.00</span>
+                                                </h1>
+                                                <h2 class="text-center mb-4">You save <span
+                                                                style="font-weight:500;text-shadow:0 0 10px white">35%</span>
+                                                </h2>
+                                                <hr>
+                                                <p><span class=dot>•</span> コースへのフルアクセス、自分で好きなように動ける <br></p>
+                                                <p><span class=dot>•</span> 自分で考えるのが好きな人に向いている <br></p>
+                                                <p><span class=dot>•</span>
+                                                        宿題やコンサルテーションはなく、コースへのアクセスのみで、フィードバックを受けずに自習することができます。 <br></p><a
+                                                        class="pricing-btn box-btn col-12 mt-4"
+                                                        href=/trading/buy/econom> 今すぐ購入する </a>
+                                        </div>
+                                        <div class="pricing-card col-12 col-lg" style=height:fit-content>
+                                                <h4 class=text-center>Standart</h4>
+                                                <h1 class="text-center mt-2" style=font-weight:300><s>$72.00</s> <span
+                                                                style="text-shadow:0 0 10px white;font-weight:700">$47.00</span>
+                                                </h1>
+                                                <h2 class="text-center mb-4">You save <span
+                                                                style="font-weight:500;text-shadow:0 0 10px white">35%</span>
+                                                </h2>
+                                                <hr>
+                                                <p><span class=dot>•</span> コースへのフルアクセス <br></p>
+                                                <p><span class=dot>•</span> 週3回、指定されたメールアドレスにテキスト形式のレッスンが届きます。 <br></p>
+                                                <p><span class=dot>•</span> コース作成者との個別質疑応答（1回） -
+                                                        コース中に生じた疑問点を質問することができます。 <br></p>
+                                                <p><span class=dot>•</span> 宿題-希望に応じて完成させ、復習することができます。 <br></p><a
+                                                        class="pricing-btn box-btn col-12 mt-4"
+                                                        href=/trading/buy/standart> 今すぐ購入する </a>
+                                        </div>
+                                        <div class="pricing-card col-12 col-lg"
+                                                style="background:rgba(49,169,193,.13);border:3px solid #74c3f3;box-shadow:0 0 60px -15px #4e8baa,0 0 40px rgba(49,159,210,.99)"
+                                                id=deluxe-card>
+                                                <h4 class=text-center style=font-weight:500>Deluxe</h4>
+                                                <h1 class="text-center mt-2" style=font-weight:300><s>$150.00</s> <span
+                                                                style="text-shadow:0 0 10px white;font-weight:700">$99.99</span>
+                                                </h1>
+                                                <h2 class="text-center mb-4">You save <span
+                                                                style="font-weight:500;text-shadow:0 0 10px white">34%</span>
+                                                </h2>
+                                                <hr><span style=font-weight:300>
+                                                        <p><span class=dot>•</span> コースへのフルアクセス <br></p>
+                                                        <p><span class=dot>•</span> 指定されたメールアドレスに、週3回テキスト形式のレッスンが届きます。
+                                                                <br></p>
+                                                        <p><span class=dot>•</span>
+                                                                コース作成者との個別質疑応答（1回）-コース中に生じた疑問点を質問することができます。 <br></p>
+                                                        <p><span class=dot>•</span> 宿題のチェック <br></p>
+                                                        <p><span class=dot>•</span> パーソナルチューター <br></p>
+                                                        <p><span class=dot>•</span> コース作成者との直接のコンタクト <br></p>
+                                                        <p><span class=dot>•</span> コース終了後の連絡の取り合い <br></p>
+                                                        <p><span class=dot>•</span> 学校創設者のサイン入り個人証明書 <br></p>
+                                                        <p><span class=dot>•</span> オプションの修了テスト（修了証書付き <br></p>
+                                                </span><a class="pricing-btn box-btn col-12 mt-4"
+                                                        href=/trading/buy/deluxe> 今すぐ購入する </a>
+                                        </div>
+                                </div>
+                        </div><a href=/enroll/ja#econom>
+                                <div class="col-12 col-sm-8 col-md-7 box-btn mx-auto mt-5 text-center"
+                                        style=padding-top:15px!important;padding-bottom:15px!important>初回レッスン無料 [econom]
+                                </div>
+                        </a><a href=/enroll/ja#standart>
+                                <div class="col-12 col-sm-8 col-md-7 box-btn mx-auto mt-4 text-center"
+                                        style=padding-top:15px!important;padding-bottom:15px!important>初回レッスン無料
+                                        [standart]</div>
+                        </a><a href=/enroll/ja#deluxe>
+                                <div class="col-12 col-sm-8 col-md-7 box-btn mx-auto mt-4 text-center"
+                                        style=padding-top:15px!important;padding-bottom:15px!important>初回レッスン無料 [deluxe]
+                                </div>
+                        </a>
+                        <h1 class="text-center mb-4" style=margin-top:7vw>受講者の声</h1>
+                        <div class="row row-cols-1 row-cols-lg-2 align-items-center">
+                                <div class=p-3>
+                                        <div class="review box mb-5"><span class="mb-3 score">8.5/10</span>
+                                                <h3>Украина, Одесса | Євгенія С.</h3>
+                                                <h4>Все чудово. Мені сподобалося книга ордерів, тепер я навчилася і можу
+                                                        передбачати недалеке майбутнє акції! Правило про власників
+                                                        компаній працює без винятків! Я вражена. Чуствую себе як oracle
+                                                        😂🤣! Буду всім радити!</h4>
+                                                <h4 class="text-center mt-4"><span
+                                                                class=email>yevgeniya.sotskaya.74@inbox.ru</span></h4>
+                                        </div>
+                                </div>
+                                <div class=p-3>
+                                        <div class="review box mb-5"><span class="mb-3 score">10/10</span>
+                                                <h3>Barselona, España | María López</h3>
+                                                <h4>Hola a todos! Quería decir que el curso es muy chulo! Voy a
+                                                        recomendarlo a todos mis amigos! Gracias, Alex Casa 😊!<br> P.
+                                                        S.<br> Tu español es muy profesional, Alex!<br></h4>
+                                                <h4 class="text-center mt-4"><span
+                                                                class=email>mar******93**@gmail.com</span></h4>
+                                        </div>
+                                </div>
+                                <div class=p-3>
+                                        <div class="review box mb-5"><span class="mb-3 score">10/10</span>
+                                                <h3>USA, Detroit | Ander Josh</h3>
+                                                <h4>I am happy with the learning course, I am really glad that I took
+                                                        it. It was definitely something new for me, even though I am
+                                                        used to working with numbers. When I opened the trading platform
+                                                        for the first time, I was blown away by the amount of data
+                                                        changing in real-time. Literally, every inch of the screen was
+                                                        updating and showing some kind of information. Alex's course
+                                                        helped me understand what to do with this huge amount of
+                                                        information, and now, I even can make decisions based on it!
+                                                        Anyway, my advice for all beginners who want to try trading:
+                                                        keep it slow, and don't be afraid of the fancy trading tools and
+                                                        platforms, you will get used to it after some time, and of
+                                                        course, it will happen much faster if you have a nice mentor
+                                                        like Alex :)</h4>
+                                                <h4 class="text-center mt-4"><span
+                                                                class=email>anderjosh89@aol.com</span></h4>
+                                        </div>
+                                </div>
+                                <div class=p-3>
+                                        <div class="review box mb-5"><span class="mb-3 score">8/10</span>
+                                                <h3>Украина, Киев | ООО "Guardian", Максим Г.</h3>
+                                                <h4>Здравствуйте, хочу порекомендовать этот замечательный курс по
+                                                        трейднгу и инвестированию. Это замечательный пример того, как
+                                                        надо преподавать! Стоит отметить, что манера изложения материала
+                                                        крайне доступна. Большое спасибо за такое прекрасный опыт!
+                                                        Спасибо, Максим.<br></h4>
+                                                <h4 class="text-center mt-4"><span
+                                                                class=email>admi******dian@outlook.com</span></h4>
+                                        </div>
+                                </div>
+                                <div class=p-3>
+                                        <div class="review box mb-5"><span class="mb-3 score">9.5/10</span>
+                                                <h3>Madrid, España | Theo</h3>
+                                                <h4>Alex was very good mentor. this course is very easy to understand.
+                                                        the most interesting part for me was techincal analysis.<br>
+                                                </h4>
+                                                <h4 class="text-center mt-4"><span
+                                                                class=email>off*****th******19*8@gmail.com</span></h4>
+                                        </div>
+                                </div>
+                                <div class=p-3>
+                                        <div class="review box mb-5"><span class="mb-3 score">9/10</span>
+                                                <h3>USA, LA | Владимир</h3>
+                                                <h4>Прекрасный курс. все по делу, без воды. изложено очень доступным
+                                                        языком.<br></h4>
+                                                <h4 class="text-center mt-4"><span
+                                                                class=email>vladimirfedorenko@aol.com</span></h4>
+                                        </div>
+                                </div>
+                                <div class=p-3>
+                                        <div class="review box mb-5"><span class="mb-3 score">20/10!!!</span>
+                                                <h3>USA, Virginia | Jullie Young</h3>
+                                                <h4>It was a really interesting course, I'm so thankful to Alex and his
+                                                        team for creating such a wonderful learning experience! I
+                                                        already opened an account and started making my first trades, I
+                                                        even shorted AMD! Even after completing the course, I keep in
+                                                        touch with Alex, I send him over my trades, and he helps me
+                                                        analyze my mistakes and decisions.<br></h4>
+                                                <h4 class="text-center mt-4"><span
+                                                                class=email>jullie.young@aol.com</span></h4>
+                                        </div>
+                                </div>
+                                <div class=p-3>
+                                        <div class="review box mb-5"><span class="mb-3 score">9/10</span>
+                                                <h3>Canada, Toronto | Elena Kotova</h3>
+                                                <h4>Здравствуйте, я много лет работаю бухгалтером в Канаде. Я решила
+                                                        попробовать себя в новой профессии. Все очень круто и просто.
+                                                        Тут нет понтов и пафосных терминов. Особенно мне понравилась
+                                                        тема "волшебные цифры".<br></h4>
+                                                <h4 class="text-center mt-4"><span
+                                                                class=email>elenka.kotova.75@bk.ru</span></h4>
+                                        </div>
+                                </div>
+                                <div class=p-3>
+                                        <div class="review box mb-5"><span class="mb-3 score">10/10</span>
+                                                <h3>Украина, Днепр | Екатерина M.</h3>
+                                                <h4>Вау!😍😍мне очень понравился курс!!!!😊👍буду рекомендовать своим
+                                                        фоловерам и подружкам!😊👌думала что у меня не получиться но
+                                                        получилось😂❤️<br></h4>
+                                                <h4 class="text-center mt-4"><span class=email>zay****9@ukr.net</span>
+                                                </h4>
+                                        </div>
+                                </div>
+                                <div class=p-3>
+                                        <div class="review box mb-5"><span class="mb-3 score">9/10</span>
+                                                <h3>Bar, Montenegro | Safet K.</h3>
+                                                <h4>First of all, I would like to thank Alex, he is a very professional
+                                                        mentor and trader. I think about taking Alex's advanced course.
+                                                        And, I hope to make some money!<br></h4>
+                                                <h4 class="text-center mt-4"><span
+                                                                class=email>saf*******ic@gmail.com</span></h4>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto" style=margin-top:5vw>
+                                <h1 class="text-center mt-5 mb-3">初回レッスンは無料です。</h1>
+                                <h5>無料レッスンの後、コース教材やプレゼンテーションのスタイルが気に入ったかどうか、コース全体の学習が面白いかどうかを確認することができます。もし気に入ったなら、残りの14レッスンの料金を支払うだけです。お支払いは、当サイトからオンラインで行うことができます。フォームに必要事項を入力すると、すぐに最初のレッスンがメールで届きます。
+                                </h5>
+                        </div><a href=/enroll/ja#econom>
+                                <div class="col-12 col-sm-8 col-md-7 box-btn mx-auto mt-5 text-center"
+                                        style=padding-top:15px!important;padding-bottom:15px!important>初回レッスン無料 [econom]
+                                </div>
+                        </a><a href=/enroll/ja#standart>
+                                <div class="col-12 col-sm-8 col-md-7 box-btn mx-auto mt-4 text-center"
+                                        style=padding-top:15px!important;padding-bottom:15px!important>初回レッスン無料
+                                        [standart]</div>
+                        </a><a href=/enroll/ja#deluxe>
+                                <div class="col-12 col-sm-8 col-md-7 box-btn mx-auto mt-4 text-center"
+                                        style=padding-top:15px!important;padding-bottom:15px!important>初回レッスン無料 [deluxe]
+                                </div>
+                        </a>
+                        <div class="col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto" style=margin-top:5vw>
+                                <h1 class="text-center mt-5 mb-3">すでにコースを購入する準備はできていますか？</h1>
+                                <h5>適切なパッケージを選択し、登録フォームに必要事項を入力してください。その後、すぐに最初のレッスンがあなたの電子メールに送信されます。</h5>
+                        </div><a href=#pricing-block>
+                                <div class="col-12 col-sm-8 col-md-7 box-btn mx-auto mt-5 text-center"
+                                        style=padding-top:15px!important;padding-bottom:15px!important>今すぐコースを購入する</div>
+                        </a>
+                        <div class="col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto" style=margin-top:5vw>
+                                <h1 class="text-center mt-5 mb-3">まだ質問がありますか？</h1>
+                                <h5>school@Ambeteco.us にメールを送るか、下の「お問い合わせ」ボタンを使ってお問い合わせください。</h5>
+                        </div><a href=/contact-us />
+                        <div class="col-12 col-sm-8 col-md-7 box-btn mx-auto mt-5 text-center"
+                                style=padding-top:15px!important;padding-bottom:15px!important>お問い合わせ</div> </a>
+                </div>
+                <style>
+                        #footer-bubble {
+                                border: 3px solid #538db0;
+                                border-radius: 50%;
+                                background: rgba(186, 244, 255, .05);
+                                box-shadow: 0 0 60px -15px #4e8baa
+                        }
+
+                        #footer-logo {
+                                position: absolute
+                        }
+
+                        #footer-parent {
+                                margin-top: 10vw;
+                                margin-bottom: 33vw
+                        }
+
+                        #footer {
+                                box-shadow: 0 0 60px -15px #4e8baa;
+                                position: absolute;
+                                border: 3px solid #538db0;
+                                background: rgba(186, 244, 255, .05);
+                                padding: 20px;
+                                border-radius: 90px;
+                                padding-top: 43px;
+                                padding-bottom: 43px;
+                                padding-left: 39px
+                        }
+
+                        #footer a {
+                                text-decoration: none !important;
+                                transition: text-shadow .3s, opacity .3s;
+                                font-weight: 200
+                        }
+
+                        #footer a:hover {
+                                opacity: .9;
+                                text-shadow: 1px 5px 25px white
+                        }
+
+                        @media screen and (max-width:1441px) {
+                                #footer-parent {
+                                        margin-top: 70vw
+                                }
+
+                                #footer {
+                                        padding-top: 1.5rem;
+                                        padding-bottom: 1.5rem;
+                                        top: 1vw;
+                                        left: 50%;
+                                        transform: translateX(-50%);
+                                        width: 83vw
+                                }
+
+                                #footer-bubble {
+                                        left: 50%;
+                                        top: -52vw;
+                                        width: 45vw;
+                                        height: 45vw;
+                                        transform: translateX(-50%);
+                                        position: absolute
+                                }
+
+                                #footer-logo {
+                                        left: 50%;
+                                        top: -43.5vw;
+                                        width: 26.19vw;
+                                        height: 26.19vw;
+                                        transform: translateX(-50%)
+                                }
+
+                                #footer .row {
+                                        padding-left: 1.3vw;
+                                        padding-right: 2vw
+                                }
+
+                                #footer h4 {
+                                        margin-top: 1rem;
+                                        font-size: 1.6rem;
+                                        margin-bottom: 1rem;
+                                        text-align: center;
+                                        line-height: 1.4
+                                }
+
+                                #footer .col {
+                                        padding-left: 3vw;
+                                        padding-right: 3vw
+                                }
+                        }
+
+                        @media screen and (min-width:1441px) {
+                                #footer {
+                                        top: 1vw;
+                                        right: 6vw;
+                                        padding: 2.8vw
+                                }
+
+                                #footer .row {
+                                        padding-left: 1.3vw;
+                                        padding-right: 2vw
+                                }
+
+                                #footer-bubble {
+                                        position: absolute;
+                                        left: 6vw;
+                                        top: -0.4vw;
+                                        width: 14.4vw;
+                                        height: 14.4vw
+                                }
+
+                                #footer-logo {
+                                        left: 9.1vw;
+                                        top: 2.5vw;
+                                        width: 8vw;
+                                        height: 8vw
+                                }
+
+                                #footer .col:nth-child(3) {
+                                        padding-right: 6rem !important
+                                }
+
+                                #footer h4 {
+                                        margin-top: 1rem;
+                                        font-size: 2rem;
+                                        margin-bottom: 1rem;
+                                        line-height: 1.4
+                                }
+
+                                #footer .col {
+                                        padding-left: 3vw;
+                                        padding-right: 3vw
+                                }
+                        }
+                </style>
+                <div id=footer-parent style=position:relative><a href= />
+                        <div id=footer-bubble></div> </a><a href= />
+                        <picture>
+                                <source srcset="static/ambeteco_logo.webp
+        " type=image/webp>
+                                <source srcset="static/ambeteco_logo.png
+        " type=image/png><img alt="Logo of Ambeteco - A new look at software" src="static/ambeteco_logo.png
+        " class=bubble-light height=700 id=footer-logo loading=lazy width=700>
+                        </picture> </a>
+                        <div id=footer>
+                                <div class=row style=white-space:nowrap>
+                                        <div class=col>
+                                                <h4 class=text-breath><a href= />Main</a></h4>
+                                        </div>
+                                        <div class=col>
+                                                <h4 class=text-breath><a href=/contact />Contact us</a></h4>
+                                        </div>
+                                        <div class=col>
+                                                <h4 class=text-breath><a href=/enroll>Enroll</a></h4>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,1857 @@
+<!doctype html>
+<html lang=en>
+
+<head>
+        <meta content="width=device-width,initial-scale=1.0" name=viewport>
+        <meta content="ie=edge" http-equiv=X-UA-Compatible>
+        <meta charset=UTF-8>
+        <link crossorigin=anonymous href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css
+                integrity=sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi rel=stylesheet>
+        <script crossorigin=anonymous integrity=sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3
+                src=https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js></script>
+        <style>
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 200;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+                        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 200;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format('woff2');
+                        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 200;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2) format('woff2');
+                        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 200;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+                        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 200;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+                        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 300;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+                        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 300;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format('woff2');
+                        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 300;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2) format('woff2');
+                        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 300;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+                        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 300;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+                        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+                        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format('woff2');
+                        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2) format('woff2');
+                        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+                        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+                        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+                        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format('woff2');
+                        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2) format('woff2');
+                        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+                        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+                }
+
+                @font-face {
+                        font-family: 'Montserrat';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-display: swap;
+                        src: url(static/fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+                        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+                }
+        </style>
+        <script>(function (a, b, c, d, e, f, g) { a[c] = a[c] || function () { (a[c].q = a[c].q || []).push(arguments) }; f = b.createElement(d); f.async = 1; f.src = "https://www.clarity.ms/tag/" + e; g = b.getElementsByTagName(d)[0]; g.parentNode.insertBefore(f, g) })(window, document, "clarity", "script", "e6l2wz8xbe")</script>
+        <script>(function (a, b, c, d, e) { a.gr = a.gr || function () { a.gr.q = a.gr.q || []; a.gr.q.push(arguments) }; d = b.getElementsByTagName(c)[0]; e = b.createElement(c); e.async = true; e.src = "https://app.getreditus.com/gr.js?_ce=90"; d.parentNode.insertBefore(e, d) })(window, document, "script"); gr("track", "pageview")</script>
+        <script>window.addEventListener('DOMContentLoaded', function () { var a = document.createElement("script"); a.type = "application/javascript"; a.src = "https://api.goaffpro.com/loader.js?shop=i1npz3c1nv"; document.body.appendChild(a) })</script>
+        <style>
+                a,
+                body,
+                div,
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6,
+                li,
+                ol,
+                p,
+                span,
+                ul {
+                        font-family: "Montserrat", "Lato", "Raleway", "Roboto", "Open Sans",
+                                sans-serif !important
+                }
+        </style>
+        <link href=static/common/apple-touch-icon.png rel=apple-touch-icon sizes=180x180>
+        <link href=static/common/favicon-32x32.png rel=icon sizes=32x32 type=image/png>
+        <link href=static/common/favicon-16x16.png rel=icon sizes=16x16 type=image/png>
+        <link href=static/common/site.webmanifest rel=manifest>
+        <script>window.addEventListener("load", function () { setTimeout(function () { const a = document.getElementById("img-background"); const b = document.getElementById("first-bg-img"); const c = 2; oneImgHeight = b.clientHeight; let d = document.body; let e = document.documentElement; let f = Math.max(d.scrollHeight, d.offsetHeight, e.clientHeight, e.scrollHeight, e.offsetHeight); chunks = f / oneImgHeight; secondImg = document.createElement("img"); imgsToLoad = Math.floor(Math.min(chunks, 39)); if (imgsToLoad <= c) { return }; for (let g = c + 1; g < imgsToLoad + 1; g++) { let h = document.createElement('picture'); sourceWebp = createSource(g, 'webp', 'webp'); sourceJpeg = createSource(g, 'jpg', 'jpeg'); let i = document.createElement("img"); i.loading = "lazy"; i.classList.add("bg-img"); i.alt = "Dark background with blue accents with light reflections"; h.appendChild(sourceWebp); h.appendChild(sourceJpeg); h.appendChild(i); i.src = `static/bgs/5/${g * 1000}.jpg`; a.appendChild(h) } }, 1000) }); function createSource(a, b, c) { let d = document.createElement('source'); d.type = `image/${c}`; d.srcset = `static/bgs/5/${a * 1000}.${b}`; return d }</script>
+        <style>
+                @keyframes text-breath {
+                        0% {
+                                text-shadow: 0 0 0 #f5fbfd;
+                                filter: brightness(1)
+                        }
+
+                        50% {
+                                text-shadow: 0 0 20px #f5fbfd;
+                                filter: brightness(2)
+                        }
+
+                        100% {
+                                text-shadow: 0 0 0 #f5fbfd;
+                                filter: brightness(1)
+                        }
+                }
+
+                body {
+                        background: #031114
+                }
+
+                #img-background img {
+                        width: 100%;
+                        max-width: 100%;
+                        height: auto
+                }
+
+                a,
+                div,
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6,
+                li,
+                ol,
+                p,
+                span,
+                ul {
+                        font-family: "Montserrat", sans-serif !important;
+                        font-weight: 100;
+                        color: white !important
+                }
+
+                a {
+                        text-decoration: none !important
+                }
+
+                #main-container {
+                        transition: filter 1s;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%
+                }
+
+                .text-breath {
+                        animation: text-breath 4s ease-in-out infinite;
+                        background: rgba(0, 67, 81, .2) !important;
+                        padding: 4px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        box-shadow: 0 0 60px -15px #4e8baa;
+                        border-radius: 20px
+                }
+        </style>
+        <style>
+                .box {
+                        border: 3px solid #538cb065;
+                        border-radius: 40px;
+                        background: rgba(186, 244, 255, .13);
+                        padding: 20px;
+                        backdrop-filter: saturate(1.2);
+                        box-shadow: 0 0 60px -15px #4e8baa
+                }
+
+                .title {
+                        font-size: 4rem;
+                        font-weight: 100;
+                        color: white
+                }
+
+                .box-btn {
+                        border: 3px solid #538db0 !important;
+                        border-radius: 40px !important;
+                        background: rgba(186, 244, 255, .13) !important;
+                        padding: 7px !important;
+                        color: white !important;
+                        backdrop-filter: saturate(1.2) !important;
+                        font-weight: 300;
+                        box-shadow: 0 0 60px -15px #4e8baa;
+                        cursor: pointer !important;
+                        font-size: 1.7rem !important;
+                        transition: filter .5s, background-color .5s
+                }
+
+                .box-btn:hover {
+                        filter: brightness(1.2) saturate(1.2);
+                        background: rgba(0, 67, 81, .5) !important
+                }
+
+                .v-p {
+                        padding-top: 20px !important;
+                        padding-bottom: 20px !important
+                }
+
+                .p-6 {
+                        padding: 5vw
+                }
+        </style>
+        <link href=https://www.ambeteco.com/trading/ hreflang=x-default rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-ru hreflang=ru rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-es hreflang=es rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-de hreflang=de rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-no hreflang=nb rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-fr hreflang=fr rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-en hreflang=en rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-uk hreflang=uk rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-sv hreflang=sv rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-da hreflang=da rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-fi hreflang=fi rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-it hreflang=it rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-pl hreflang=pl rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-pt hreflang=pt rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-sq hreflang=sq rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-ar hreflang=ar rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-el hreflang=el rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-he hreflang=he rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-ja hreflang=ja rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-ko hreflang=ko rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-lb hreflang=lb rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-ms hreflang=ms rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-nl hreflang=nl rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-th hreflang=th rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-tr hreflang=tr rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-zh_hans hreflang=zh-Hans rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-zh_hant hreflang=zh-Hant rel=alternate>
+        <link href=https://www.ambeteco.com/trading/landing-it rel=canonical>
+        <meta content="
+
+I primi passi di un investitore - Ricevi la prima lezione gratis - Corso per principianti In 15 lezioni riceverai tutte
+le conoscenze necessarie per iniziare a fare trading su un conto reale. Il corso costa 27.00 dollari: Iscriviti ora e
+ricevi la prima lezione gratis.
+
+
+" name=description>
+        <title> Scuola di trading e investimento "Ambeteco Invest-School" - Corso di apprendimento </title>
+</head>
+
+<body class="container-fluid g-0">
+        <style>
+                @keyframes invisible-pane {
+                        0% {
+                                opacity: 1
+                        }
+
+                        100% {
+                                opacity: 0
+                        }
+                }
+
+                @keyframes navigation-pane-close {
+                        0% {
+                                opacity: 1
+                        }
+
+                        100% {
+                                opacity: 0
+                        }
+                }
+
+                @keyframes navigation-pane-open {
+                        from {
+                                opacity: 0
+                        }
+
+                        to {
+                                opacity: 1
+                        }
+                }
+
+                .pn-item {
+                        margin-top: 3.5vw;
+                        padding: 10px;
+                        border: 2px solid rgba(106, 124, 128, .13);
+                        border-radius: 30px;
+                        position: relative;
+                        cursor: pointer;
+                        transition: background-color .3s
+                }
+
+                .pn-item:hover {
+                        background: rgba(106, 124, 128, .13)
+                }
+
+                .navigation {
+                        display: none;
+                        backdrop-filter: blur(10px);
+                        position: absolute;
+                        white-space: nowrap;
+                        top: 50vh;
+                        left: 50vw;
+                        transform: translate(-50%, -50%);
+                        transition: opacity .3s
+                }
+
+                .product-item {
+                        margin-top: .5vw;
+                        padding: 10px;
+                        border: 2px solid rgba(106, 124, 128, .13);
+                        border-radius: 30px;
+                        position: relative;
+                        cursor: pointer;
+                        transition: background-color .3s, filter .3s
+                }
+
+                .product-item:hover {
+                        background: rgba(106, 124, 128, .33);
+                        filter: drop-shadow(0px 0 20px #538db0)
+                }
+
+                .top-item {
+                        filter: saturate(3) brightness(1.3);
+                        background: linear-gradient(to top,
+                                        rgba(81, 120, 188, .21) 0%,
+                                        rgba(72, 172, 170, .15) 97%,
+                                        rgba(72, 172, 170, .15) 100%)
+                }
+
+                .navigation-open {
+                        filter: brightness(0.7) blur(20px);
+                        user-select: none !important;
+                        pointer-events: none !important
+                }
+
+                .invisible-pane {
+                        animation: invisible-pane .3s forwards
+                }
+
+                .navigation-pane-close {
+                        animation: navigation-pane-close .3s forwards
+                }
+
+                .navigation-pane-open {
+                        animation: navigation-pane-open .3s forwards
+                }
+
+                @media screen and (max-width:768px) {
+                        .navigation {
+                                display: block;
+                                width: 90vw !important;
+                                padding-top: 13vw;
+                                padding-bottom: 13vw
+                        }
+
+                        .pn-item {
+                                margin-top: 14.5vw
+                        }
+
+                        .navigation img {
+                                width: 8vw !important;
+                                margin-right: 1.5vw !important
+                        }
+                }
+        </style>
+        <script>async function showPane(a) { allPanes = document.getElementsByClassName("navigation"); for (var b of allPanes) { if (b.id != a) { b.classList.add("invisible-pane") } }; await sleep(300); for (var b of allPanes) { if (b.id != a) { b.style.display = "none" } }; targetpane = document.getElementById(a); targetpane.classList.remove("invisible-pane"); targetpane.style.display = "block" } async function hidePane(a) { pane = document.getElementById(a); pane.classList.add("invisible-pane"); await sleep(300); pane.style.display = "none"; pane.classList.remove("invisible-pane") } async function handleNavigationMenuClick(a, b, c) { b.stopPropagation(); if (a.style.display === "none") { hideOnClickOutside(a, c); await showPane(a.id) } else { await hidePane(a.id) } } async function sleep(a) { return new Promise(b => setTimeout(b, a)) } async function hideOnClickOutside(a, b) { const c = async (e) => { if (!a.contains(e.target) && isVisible(a)) { await hidePane(a.id); if (!b) { await showPane("product-navigation") }; if (productNavigation.style.display === "none") { mainContainer = document.getElementById("main-container"); mainContainer.classList.remove("navigation-open") }; d() } }; const d = () => { document.removeEventListener("click", c) }; document.addEventListener("click", c) } const isVisible = a => !!a && !!(a.offsetWidth || a.offsetHeight || a.getClientRects().length); window.addEventListener("DOMContentLoaded", function () { var a = document.getElementById("product-navigation-btn"); productNavigation = document.getElementById("product-navigation"); if (a == null) { return }; a.onclick = function (b) { positionNavigationMenu(productNavigation); handleNavigationMenuClick(productNavigation, b, true) }; selectPageBtn = document.getElementById("select-page-btn"); selectPage = document.getElementById("select-page"); selectPageBtn.onclick = function (b) { handleNavigationMenuClick(selectPage, b, false) }; selectProductBtn = document.getElementById("select-product-btn"); selectProduct = document.getElementById("select-product"); selectProductBtn.onclick = function (b) { handleNavigationMenuClick(selectProduct, b, false) } }); function positionNavigationMenu(a) { mainContainer = document.getElementById("main-container"); mainContainer.classList.add("navigation-open") }</script>
+        <div id=main-container>
+                <div id=img-background style=position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1>
+                        <picture>
+                                <source srcset=static/bgs/5/0.webp type=image/webp>
+                                <source srcset=static/bgs/5/0.jpg type=image/jpeg><img
+                                        alt="Dark background with blue accents with light reflections" height=1000
+                                        id=first-bg-img src=static/bgs/5/0.jpg width=1920>
+                        </picture>
+                        <picture>
+                                <source srcset=static/bgs/5/1000.webp type=image/webp>
+                                <source srcset=static/bgs/5/1000.jpg type=image/jpeg><img
+                                        alt="Dark background with blue accents with light reflections" height=1000
+                                        loading=lazy src=static/bgs/5/1000.jpg width=1920>
+                        </picture>
+                        <picture>
+                                <source srcset=static/bgs/5/2000.webp type=image/webp>
+                                <source srcset=static/bgs/5/2000.jpg type=image/jpeg><img
+                                        alt="Dark background with blue accents with light reflections" height=1000
+                                        loading=lazy src=static/bgs/5/2000.jpg width=1920>
+                        </picture>
+                </div>
+                <style>
+                        #nav {
+                                background-color: transparent !important;
+                                backdrop-filter: saturate(1.1) !important;
+                                padding: 2.5vw;
+                                border-radius: 150px;
+                                box-shadow: 0 0 60px -5px #4e8baa;
+                                margin-top: 4vw;
+                                z-index: 999;
+                                background: linear-gradient(to top,
+                                                rgba(81, 120, 188, .21) 0%,
+                                                rgba(72, 172, 170, .15) 97%,
+                                                rgba(72, 172, 170, .15) 100%);
+                                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#365178bc', endColorstr='#2648acaa', GradientType=0)
+                        }
+
+                        .navbar-brand {
+                                border: 3px solid #538db0;
+                                border-radius: 100%;
+                                background: rgba(186, 244, 255, .13);
+                                width: 9vw;
+                                padding: 20px;
+                                text-align: center;
+                                position: relative;
+                                margin-left: 6vw
+                        }
+
+                        .navbar-brand::before {
+                                border-radius: 100%;
+                                content: "";
+                                box-shadow: 0 0 60px 10px #004a49;
+                                mix-blend-mode: soft-light;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%
+                        }
+
+                        .nav-item {
+                                border: 3px solid #538db0;
+                                border-radius: 40px;
+                                background: rgba(186, 244, 255, .13);
+                                padding: 0;
+                                cursor: pointer;
+                                text-align: center;
+                                padding-left: 30px;
+                                padding-right: 30px;
+                                position: relative;
+                                margin-left: .5vw;
+                                margin-right: .5vw;
+                                transition: filter .5s, background-color .5s
+                        }
+
+                        .nav-item:hover {
+                                filter: brightness(1.2) saturate(1.2);
+                                background: rgba(0, 67, 81, .5) !important
+                        }
+
+                        .nav-item::before {
+                                border-radius: 40px;
+                                content: "";
+                                z-index: -1;
+                                box-shadow: 0 0 60px 10px #004a49;
+                                mix-blend-mode: soft-light;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%
+                        }
+
+                        .nav-item a {
+                                font-size: 1.6rem;
+                                font-weight: 200;
+                                margin: 0;
+                                padding: 6px;
+                                white-space: nowrap;
+                                border: none !important
+                        }
+
+                        #nav-ul {
+                                margin-left: 6vw
+                        }
+
+                        .dropdown-menu {
+                                background: rgba(186, 244, 255, .13);
+                                border-radius: 40px;
+                                padding: 20px;
+                                margin-top: 10px !important
+                        }
+
+                        .dropdown-menu a {
+                                font-size: 1.3rem !important
+                        }
+
+                        .dropdown-item {
+                                transition: background-color .5s;
+                                border-radius: 30px
+                        }
+
+                        .dropdown-item:hover {
+                                background: rgba(0, 67, 81, .5) !important
+                        }
+
+                        @media screen and (min-width:1200px) and (max-width:1211px) {
+                                .nav-item {
+                                        margin-top: 1vw;
+                                        margin-bottom: 1vw
+                                }
+                        }
+
+                        @media screen and (max-width:1199.98px) {
+                                #nav {
+                                        border-radius: 50px
+                                }
+
+                                .navbar-toggler {
+                                        position: absolute;
+                                        top: 14vw;
+                                        left: 10vw
+                                }
+
+                                .nav-item {
+                                        margin-top: 4vw
+                                }
+
+                                .navbar-brand img {
+                                        width: 20vw !important;
+                                        position: absolute;
+                                        left: 50%;
+                                        top: 50%;
+                                        transform: translate(-50%, -50%)
+                                }
+
+                                .navbar-brand {
+                                        margin-right: auto !important;
+                                        margin-left: auto !important;
+                                        width: 32vw !important;
+                                        height: 32vw;
+                                        position: relative
+                                }
+
+                                .dropdown-menu {
+                                        margin-bottom: 6vw !important
+                                }
+
+                                #product-navigation-btn img {
+                                        width: 8.5vw !important
+                                }
+                        }
+
+                        @media screen and (min-width:1000px) and (max-width:1211px) {
+                                .navbar-brand img {
+                                        width: 10vw !important
+                                }
+
+                                .navbar-brand {
+                                        width: 16vw !important;
+                                        height: 16vw
+                                }
+
+                                .navbar-toggler {
+                                        position: absolute;
+                                        top: 8vw;
+                                        left: 10vw
+                                }
+                        }
+
+                        @media screen and (min-width:750px) and (max-width:1001px) {
+                                .navbar-brand img {
+                                        width: 14vw !important
+                                }
+
+                                .navbar-brand {
+                                        width: 20vw !important;
+                                        height: 20vw
+                                }
+
+                                .navbar-toggler {
+                                        position: absolute;
+                                        top: 10vw;
+                                        left: 10vw
+                                }
+                        }
+                </style>
+                <nav class="navbar navbar-expand-xl navbar-dark bg-dark col-11 col-md-11 mx-auto" id=nav>
+                        <div class=container-fluid><a class=navbar-brand href= />
+                                <picture>
+                                        <source srcset="static/ambeteco_logo.webp
+        " type=image/webp>
+                                        <source srcset="static/ambeteco_logo.png
+        " type=image/png><img alt="Logo of Ambeteco - A new look at software" src=static/common/ambeteco_logo.png
+                                                style=max-width:100%;max-height:100%;border-radius:0!important;width:7vw;text-align:center>
+                                </picture> </a><button aria-label="Toggle navigation"
+                                        aria-controls=navbarSupportedContent aria-expanded=false class=navbar-toggler
+                                        data-bs-target=#navbarSupportedContent data-bs-toggle=collapse type=button><span
+                                                class=navbar-toggler-icon></span></button>
+                                <div class="collapse navbar-collapse" id=navbarSupportedContent>
+                                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 row mx-auto" id=nav-ul>
+                                                <li class="col nav-item"><a class=nav-link href="/">main</a></li>
+                                                <li class="col nav-item"><a class=nav-link href="/contact">contact</a>
+                                                </li>
+                                                <li class="col nav-item"><a class=nav-link href="/enroll">enroll</a>
+                                                </li>
+                                        </ul>
+                                        </li>
+                                        </ul>
+                                </div>
+                        </div>
+                </nav>
+                <div class="container-fluid g-5 p-5" id=fluid-cont style=margin-bottom:5vw;margin-top:3vw>
+                        <style>
+                                #lesson-body p {
+                                        font-weight: 300 !important;
+                                        margin-bottom: .5rem !important;
+                                        font-size: 1.1rem
+                                }
+
+                                #lesson-body .highlight {
+                                        font-weight: 600;
+                                        text-shadow: 0 3px 10px white;
+                                        transition: text-shadow .5s
+                                }
+
+                                #lesson-body .highlight:hover {
+                                        text-shadow: 0 0 0 white
+                                }
+
+                                #lesson-body .term {
+                                        box-shadow: 0 3px 20px -10px white;
+                                        transition: box-shadow .5s;
+                                        background: #132937;
+                                        border: 1px #538db0 solid;
+                                        color: white !important;
+                                        padding: 4px;
+                                        font-weight: 600;
+                                        border-radius: 10px;
+                                        margin-right: 4px;
+                                        margin-left: 4px
+                                }
+
+                                #lesson-body .term:hover {
+                                        box-shadow: 0 3px 20px 5px #538db0
+                                }
+
+                                .minus-badge {
+                                        padding-left: 1rem;
+                                        padding-right: 1rem;
+                                        padding-bottom: .3rem;
+                                        border-radius: 50%;
+                                        font-size: 2rem;
+                                        font-weight: 700;
+                                        background: #8f8f8f;
+                                        opacity: .7
+                                }
+
+                                .plus-badge {
+                                        padding: .6rem 1rem;
+                                        opacity: .7;
+                                        background: #538db0;
+                                        font-weight: 700;
+                                        border-radius: 50%;
+                                        font-size: 1.2rem
+                                }
+
+                                .checkmark-main {
+                                        opacity: 1 !important
+                                }
+
+                                #lesson-body {
+                                        transition: 1s background-color;
+                                        padding: 3rem !important
+                                }
+
+                                .config-btn {
+                                        padding: 0vw .55vw !important;
+                                        cursor: pointer !important
+                                }
+
+                                #contrast-indicator {
+                                        transition: 1s width
+                                }
+
+                                #lesson-body img {
+                                        max-width: 100%;
+                                        width: 100%;
+                                        border-radius: 60px !important;
+                                        margin-top: 5rem;
+                                        margin-bottom: 5rem
+                                }
+
+                                .landing-img img {
+                                        width: 100%;
+                                        border-radius: 60px !important;
+                                        filter: drop-shadow(-20px 15px 30px #feb46f) drop-shadow(20px -15px 30px #136962)
+                                }
+
+                                .landing-img {
+                                        margin-top: 4vw;
+                                        margin-bottom: 4vw
+                                }
+
+                                .theme-box p {
+                                        margin: 0 !important
+                                }
+
+                                .theme-box {
+                                        border-radius: 40px;
+                                        background: rgba(186, 244, 255, .13);
+                                        backdrop-filter: saturate(1.2);
+                                        box-shadow: 0 0 60px -15px #4e8baa;
+                                        font-size: 1.5rem;
+                                        padding: 1.4rem;
+                                        margin-top: .8rem;
+                                        margin-bottom: .8rem;
+                                        padding-left: 1rem
+                                }
+
+                                .dot {
+                                        font-weight: 900
+                                }
+
+                                .landing-word-box {
+                                        border-radius: 40px;
+                                        background: rgba(186, 244, 255, .13);
+                                        backdrop-filter: saturate(1.2);
+                                        margin-top: .5rem;
+                                        padding-left: 1rem;
+                                        padding-right: 1rem;
+                                        display: inline-block;
+                                        margin-right: .4rem;
+                                        white-space: nowrap
+                                }
+
+                                .score {
+                                        border: 3px solid #538db0 !important;
+                                        border-radius: 40px !important;
+                                        background: rgba(186, 244, 255, .13) !important;
+                                        padding: 7px !important;
+                                        color: white !important;
+                                        backdrop-filter: saturate(1.2) !important;
+                                        font-weight: 300;
+                                        box-shadow: 0 0 60px -15px #4e8baa;
+                                        font-size: 1.7rem !important;
+                                        transition: filter .5s, background-color .5s;
+                                        display: inline-block
+                                }
+
+                                .email {
+                                        font-weight: 500;
+                                        word-wrap: anywhere
+                                }
+
+                                .table {
+                                        --bs-table-color: #fff;
+                                        --bs-table-bg: rgba(186, 244, 255, .13);
+                                        --bs-table-border-color: rgba(186, 244, 255, .13);
+                                        --bs-table-striped-bg: rgba(186, 244, 255, .13);
+                                        --bs-table-striped-color: #fff;
+                                        --bs-table-active-bg: rgba(186, 244, 255, .13);
+                                        --bs-table-active-color: #fff;
+                                        --bs-table-hover-bg: rgba(186, 244, 255, .13);
+                                        --bs-table-hover-color: #fff
+                                }
+
+                                .table-selected {
+                                        background: rgba(0, 168, 202, .324) !important;
+                                        font-weight: 500
+                                }
+
+                                .table> :not(caption)>*>* {
+                                        border-bottom-width: 0 !important
+                                }
+
+                                .table th[scope] {
+                                        padding-left: 2rem
+                                }
+
+                                .pricing-card {
+                                        border: 3px solid #538db0;
+                                        border-radius: 40px;
+                                        background: rgba(186, 244, 255, .13);
+                                        padding: 20px;
+                                        backdrop-filter: saturate(1.2);
+                                        box-shadow: 0 0 60px -15px #4e8baa;
+                                        margin: 1vw
+                                }
+
+                                .pricing-card p {
+                                        margin-bottom: .8rem
+                                }
+
+                                .pricing-btn {
+                                        display: block;
+                                        text-align: center
+                                }
+
+                                #deluxe-card p {
+                                        margin-bottom: .4rem
+                                }
+
+                                @media screen and (max-width:768px) {
+                                        #lesson-body .term {
+                                                margin-bottom: 0;
+                                                margin-top: 0;
+                                                display: inline-block
+                                        }
+
+                                        #lesson-body {
+                                                padding: 8vw !important;
+                                                padding-top: 10vw !important;
+                                                padding-bottom: 10vw !important
+                                        }
+
+                                        .theme-box {
+                                                font-size: 1rem
+                                        }
+
+                                        #fluid-cont {
+                                                padding: 4vw !important
+                                        }
+                                }
+
+                                @media screen and (max-width:1023px) {
+                                        .pricing-card {
+                                                margin-top: 3rem
+                                        }
+                                }
+                        </style>
+                        <div class="box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto p-4"
+                                style="background:rgba(0,0,0,.2);border:0 solid #538db0;border-radius:60px"
+                                id=lesson-body>
+                                <div>
+                                        <p>
+                                        <h1 class="mb-4 lesson-title">Scuola online "Ambeteco Invest-School"</h1>
+                                        <p>Il nostro corso contiene <span class=highlight> 15 lezioni. </span>
+                                                riceverete la prima lezione <span class=highlight> assolutamente gratis.
+                                                </span></p>
+                                        <p>Con noi non rischi nulla: puoi provare, capire da solo se sei interessato a
+                                                questo tipo di professione, le conoscenze che otterrai rimarranno con te
+                                                e allo stesso tempo passerai a un nuovo livello di te stesso sviluppo —
+                                                tutto questo a un prezzo simbolico!</p>
+                                </div>
+                        </div>
+                        <div class="landing-img col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <picture>
+                                        <source srcset=static/lesson_imgs/start/0.webp type=image/webp>
+                                        <source srcset=static/lesson_imgs/start/0.jpg type=image/jpeg><img
+                                                alt="Photo of night city in pink-blue colors"
+                                                style="filter:drop-shadow(-20px 15px 30px #112484) drop-shadow(20px -15px 30px #a45b78)"
+                                                src=static/lesson_imgs/start/0.jpg>
+                                </picture>
+                        </div>
+                        <div class="box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto p-4"
+                                style="background:rgba(0,0,0,.2);border:0 solid #538db0;border-radius:60px"
+                                id=lesson-body>
+                                <p>Durante le 15 lezioni acquisirai tutte le conoscenze necessarie per iniziare a
+                                        investire/fare trading <span class=highlight> su un vero (non demo!) </span>
+                                        account.</p>
+                                <p>Non è necessaria alcuna conoscenza preliminare di questo argomento. Tutti i concetti
+                                        di base, le regole e le terminologie ti verranno presentati in una forma
+                                        semplice.</p>
+                                <p>Dopo aver studiato il nostro corso, otterrai una quantità sufficiente di conoscenze
+                                        che ti permetteranno di capire <span class=highlight> come funziona il mercato
+                                                azionario </span> , nonché tutti i motivi che ne influenzano il
+                                        comportamento.</p>
+                        </div>
+                        <div class="landing-img col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <picture>
+                                        <source srcset=static/lesson_imgs/start/1.webp type=image/webp>
+                                        <source srcset=static/lesson_imgs/start/1.jpg type=image/jpeg><img
+                                                alt="Photo of a city in cyan-yellow colors" loading=lazy
+                                                src=static/lesson_imgs/start/1.jpg>
+                                </picture>
+                        </div>
+                        <div class="box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto p-4"
+                                style="background:rgba(0,0,0,.2);border:0 solid #538db0;border-radius:60px"
+                                id=lesson-body>
+                                <p>Il nostro corso sarà interessante per vari gruppi di persone: per tutti coloro che
+                                        vorrebbero provare a fare trading e investire in borsa o altri titoli, ma non
+                                        sanno come fare o hanno paura di iniziare a farlo.</p>
+                                <p>Avrai accesso al <span class=highlight> prima lezione gratuita </span> dopo aver
+                                        compilato il modulo.</p>
+                                <p>Durante il processo di studio, tratteremo il <span class=highlight> seguenti
+                                                argomenti: </span></p>
+                        </div>
+                        <h1 class="text-center mt-5 mb-4">Elenco degli argomenti del corso di formazione:</h1>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> NYSE, NASDAQ, AMEX, LSE: cos'è e come funziona;</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> Fondamenti di trading e investimento - nozioni di base per
+                                        l'apertura di posizioni;</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> I primi passi del trader: tutto ciò che devi sapere sul
+                                        trading;</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> Basic notions a trader needs - Offerta, Chiedere,
+                                        Differenza, Metà, Volume, Scorso, Chiudere, Basso, Alto, Avg. Price;</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> Risorse online per trovare informazioni: come lavorare con
+                                        loro;</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> Istruzioni su come trovare le azioni giuste: la nostra
+                                        soluzione universale;</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> Cos'è la rendicontazione aziendale e come utilizzarla a
+                                        proprio vantaggio;</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> Azioni e come funzionano - confronto con CFD;</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> La formula per le posizioni sicure o come proteggersi dalle
+                                        perdite;</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> Futures, fondi, indici: come influenzano il comportamento
+                                        delle azioni e come proteggersi;</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> Amici tra le scorte: a cosa servono, cosa farne, come
+                                        trovarli?;</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> Saper leggere il book degli ordini e il ticker degli ordini
+                                        - una delle abilità più importanti per un professionista e come può salvare un
+                                        trader.;</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> Fondamenti di analisi tecnica - supporto e resistenza, come
+                                        affrontarli;</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> Azionisti della società - come essere loro amici, cosa
+                                        possono dirci e come possiamo fare soldi con loro;</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> "Numeri magici": cosa sono e come usarli per il reddito;</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> Psicologia del trading: le nostre trappole cerebrali;</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> Come trovare la direzione delle scorte e chi ci aiuterà in
+                                        questo;</p>
+                        </div>
+                        <div class="theme-box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <p><span class=dot>•</span> Quando comprare e quando vendere - la domanda di tutti i
+                                        trader e gli investitori;</p>
+                        </div>
+                        <h1 class="text-center mt-5 mb-5">E questo non è un elenco completo dei nostri argomenti!</h1>
+                        <div class="landing-img col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <picture>
+                                        <source srcset=static/lesson_imgs/start/sup.webp type=image/webp>
+                                        <source srcset=static/lesson_imgs/start/sup.jpg type=image/jpeg><img
+                                                alt="An illustration of technical analysis"
+                                                style="filter:drop-shadow(-20px 15px 30px #3e2737) drop-shadow(20px -15px 30px #d98c7c)"
+                                                loading=lazy src=static/lesson_imgs/start/sup.jpg>
+                                </picture>
+                        </div>
+                        <div class="box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto p-4"
+                                style="background:rgba(0,0,0,.2);border:0 solid #538db0;border-radius:60px"
+                                id=lesson-body>
+                                <p>Dopo aver completato il corso, avrai le conoscenze necessarie per fare trading in
+                                        borsa con un conto reale. Imparerai perché ogni investitore dovrebbe conoscere
+                                        queste parole e perché sono necessarie nel trading quotidiano:</p>
+                        </div>
+                        <div class="col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto mt-5 mb-5"
+                                style=line-height:3.5;word-break:break-all>
+                                <div class=landing-word-box>NASDAQ</div>
+                                <div class=landing-word-box>AMEX</div>
+                                <div class=landing-word-box>NYSE</div>
+                                <div class=landing-word-box>LSE</div>
+                                <div class=landing-word-box>Diversificazione</div>
+                                <div class=landing-word-box>Ticker</div>
+                                <div class=landing-word-box>Lungo</div>
+                                <div class=landing-word-box>Breve</div>
+                                <div class=landing-word-box>Spacco</div>
+                                <div class=landing-word-box>Addetti ai lavori</div>
+                                <div class=landing-word-box>Stop loss</div>
+                                <div class=landing-word-box>Perdenti</div>
+                                <div class=landing-word-box>Fondo speculativo</div>
+                                <div class=landing-word-box>Broker</div>
+                                <div class=landing-word-box>Dividendi</div>
+                                <div class=landing-word-box>Broker</div>
+                                <div class=landing-word-box>Elenco</div>
+                                <div class=landing-word-box>La Fed</div>
+                                <div class=landing-word-box>52 settimane</div>
+                                <div class=landing-word-box>CPI</div>
+                                <div class=landing-word-box>PIL</div>
+                                <div class=landing-word-box>SPAZIO</div>
+                                <div class=landing-word-box>P&L</div>
+                                <div class=landing-word-box>Prezzo medio</div>
+                                <div class=landing-word-box>Offerta</div>
+                                <div class=landing-word-box>Chiedere</div>
+                                <div class=landing-word-box>Differenza</div>
+                                <div class=landing-word-box>Metà</div>
+                                <div class=landing-word-box>Volume</div>
+                                <div class=landing-word-box>Scorso</div>
+                                <div class=landing-word-box>Chiudere</div>
+                                <div class=landing-word-box>Basso</div>
+                                <div class=landing-word-box>Alto</div>
+                        </div>
+                        <div class="box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto p-4"
+                                style="background:rgba(0,0,0,.2);border:0 solid #538db0;border-radius:60px"
+                                id=lesson-body>
+                                <p>Esamineremo anche molte società ben note e quotate sui mercati azionari sia degli
+                                        Stati Uniti che del Regno Unito. Li considereremo come esempi, analizzeremo i
+                                        loro grafici e analizzeremo il loro comportamento:</p>
+                        </div>
+                        <div class="col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto mt-5 mb-5"
+                                style=line-height:3.5;word-break:break-all><a
+                                        href="https://www.google.com/search?client=firefox-b-d&q=quote+GOOG"
+                                        rel=noopener target=_blank>
+                                        <div class=landing-word-box>google [GOOG]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+TSLA" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Tesla [TSLA]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+AMZN" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Amazon [AMZN]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+NFLX" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Netflix [NFLX]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+F" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Ford [F]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+AAPL" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Apple [AAPL]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+JNJ" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Johnson & Johnson [JNJ]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+V" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Visto [V]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+MA" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>MasterCard [MA]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+META" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Meta (Facebook) [META]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+MSFT" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Microsoft [MSFT]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+AMD" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>e [AMD]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+NVDA" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Nvidia [NVDA]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+MU" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Micron [MU]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+CVX" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Chevron [CVX]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+PG" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Proctor & Gamble [PG]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+INTC" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Intel [INTC]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+GE" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>General Electric [GE]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+VOD" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Vodafone [VOD]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+C" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Banca comunale [C]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+GM" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Motori generali [GM]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+WFC" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Wells Fargo [WFC]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+CMA" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Comerica [CMA]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+BCS" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Barclays [BCS]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+JPM" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>JPMorgan Chase [JPM]</div>
+                                </a><a href="https://www.google.com/search?client=firefox-b-d&q=quote+BAC" rel=noopener
+                                        target=_blank>
+                                        <div class=landing-word-box>Banca d'America [BAC]</div>
+                                </a></div>
+                        <div class="landing-img col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto">
+                                <picture>
+                                        <source srcset=static/lesson_imgs/start/2.webp type=image/webp>
+                                        <source srcset=static/lesson_imgs/start/2.jpg type=image/jpeg><img
+                                                alt="A photo of a laptop, a table, and a phone on a table, showing charts and trading platforms"
+                                                style="filter:drop-shadow(-20px 15px 30px #091468) drop-shadow(20px -15px 30px #ff061c82)"
+                                                loading=lazy src=static/lesson_imgs/start/2.jpg>
+                                </picture>
+                        </div>
+                        <div class="box col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto p-4"
+                                style="background:rgba(0,0,0,.2);border:0 solid #538db0;border-radius:60px"
+                                id=lesson-body>
+                                <p>Quando finirai di studiare la nostra prima lezione <span class=highlight> (che è
+                                                completamente gratuita) </span> e quando capirai il nostro modo di
+                                        educare, probabilmente sarai interessato all'intero corso. se ti piace tutto,
+                                        dovrai pagare solo l'altro rimanente <span class=highlight> 14 lezioni. </span>
+                                        una volta pagato, avrai <span class=highlight> accesso al corso completo,
+                                        </span> secondo il gruppo di tua scelta. puoi acquistarci il corso direttamente
+                                        sul nostro sito web, utilizzando il <span class=highlight> pulsante a fine
+                                                pagina. </span></p>
+                                <p>Il processo di pagamento non richiederà molto tempo, il nostro servizio è organizzato
+                                        molto facilmente, è crittografato e accettiamo qualsiasi carta per il pagamento,
+                                        senza commissioni o commissioni!</p>
+                                <p>Quindi, hai l'opportunità di provare il prodotto eccellente e di alta qualità per
+                                        <span class=highlight> una somma di denaro abbordabile. </span></p>
+                        </div>
+                        <div class="box mt-5 col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto p-4"
+                                style="background:rgba(0,0,0,.2);border:0 solid #538db0;border-radius:60px"
+                                id=lesson-body>
+                                <p>Attualmente sono disponibili tre gruppi per l'iscrizione: <span
+                                                class=highlight>Economica, Standard, Deluxe.</span></p><br>
+                                <p><span class=highlight>Nel pacchetto "Economia",</span> hai solo accesso al corso, ti
+                                        muovi da solo, come preferisci. Va bene per le persone a cui piace per capire
+                                        tutto da soli. Nel pacchetto "Econom", non ci sono compiti a casa,
+                                        consultazioni, comunicazione con l'autore - solo accesso al corso.<br> — Prezzo
+                                        del pacchetto "Econom": <br> <span style=font-weight:700>Limited time offer:
+                                        </span> <span
+                                                style="box-shadow:0 3px 20px -10px white;transition:box-shadow .5s;background:#132937;border:1px #538db0 solid;color:white!important;padding:4px;font-weight:600;border-radius:10px;margin-right:4px;margin-left:4px;white-space:pre!important">$27.00</span>
+                                        <br> <span style=font-weight:700> <s>$42.00</s> Save 35% </span></p><br>
+                                <p><span class=highlight>Nel pacchetto "Standart",</span> si accede al corso e, al
+                                        termine della formazione, a una sessione individuale di domande e risposte con
+                                        autore del corso - potrai porre tutte le domande che hai avuto durante il
+                                        durante il corso. <br> — Prezzo del pacchetto "Standart": <span
+                                                style=font-weight:700>$47.00</span></p><br>
+                                <p><span class=highlight>Nel pacchetto "Deluxe", ottieni tutto ciò che è incluso in
+                                                "Econom" e "Standart" e, inoltre, ottieni</span><br> <span
+                                                class=dot>•</span> Consultazione personale con l'autore del corso;<br>
+                                        <span class=dot>•</span> Controllo dei compiti;<br> <span class=dot>•</span>
+                                        Tutore personale;<br> <span class=dot>•</span> Comunicazione diretta con
+                                        l'autore del corso durante l'apprendimento;<br> <span class=dot>•</span>
+                                        Certificato personale firmato dal fondatore della scuola;<br> <span
+                                                class=dot>•</span> Test di uscita facoltativo con un certificato che
+                                        conferma i tuoi progressi;<br> <span class=dot>•</span> Supporto per la
+                                        comunicazione dopo il completamento del corso;<br> <span style=font-weight:700>—
+                                                Prezzo del pacchetto "Deluxe": $ 99,99</span></p><br>
+                                <p>È necessario compilare un modulo per iscriversi alla scuola. Dopo il pagamento,
+                                        riceverai immediatamente l'accesso al corso all'indirizzo email che indicherai
+                                        al momento dell'iscrizione.</p>
+                        </div>
+                        <div class="col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto" style=margin-top:5vw>
+                                <h1 class="text-center mt-5 mb-3">Iscriviti e ricevi la prima lezione gratis!</h1>
+                                <h5>Compila il modulo e ricevi la prima lezione immediatamente nella tua e-mail! Dopo
+                                        aver ricevuto la prima lezione assolutamente gratuita, potrai capire se ti piace
+                                        il materiale didattico, lo stile delle lezioni e se è interessante studiare il
+                                        corso completo. Se vi piace, non dovrete far altro che pagare le restanti 14
+                                        lezioni. Potete farlo effettuando un pagamento online direttamente sul nostro
+                                        sito.</h5>
+                        </div><a href=/enroll/it#econom>
+                                <div class="col-12 col-sm-8 col-md-7 box-btn mx-auto mt-5 text-center"
+                                        style=padding-top:15px!important;padding-bottom:15px!important>Prima lezione
+                                        gratuita [Econom]</div>
+                        </a><a href=/enroll/it#standart>
+                                <div class="col-12 col-sm-8 col-md-7 box-btn mx-auto mt-4 text-center"
+                                        style=padding-top:15px!important;padding-bottom:15px!important>Prima lezione
+                                        gratuita [Standart]</div>
+                        </a><a href=/enroll/it#deluxe>
+                                <div class="col-12 col-sm-8 col-md-7 box-btn mx-auto mt-4 text-center"
+                                        style=padding-top:15px!important;padding-bottom:15px!important>Prima lezione
+                                        gratuita [Deluxe]</div>
+                        </a>
+                        <div class="col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto" style=margin-top:7vw>
+                                <h1 class="text-center mt-5 mb-3">Ambeteco Invest-School:<br> Il miglior corso di
+                                        trading per principianti.</h1>
+                                <h4 class="text-center mb-5">Forniamo tutto ciò di cui un trader o un investitore
+                                        principiante ha bisogno: un mentore personale, la comunicazione con l'autore del
+                                        corso, il controllo dei compiti a casa - tutte le conoscenze necessarie per il
+                                        trading reale nel mercato azionario.</h4>
+                                <h2 class="text-center mb-4" style=margin-top:7vw>Confronto tra le caratteristiche dei
+                                        diversi corsi di trading</h2>
+                                <div class=d-lg-none>
+                                        <h4 class="text-center mb-4 mt-5">Scorrere orizzontalmente con il dito per
+                                                visualizzare la tabella.</h4>
+                                </div>
+                                <div class=table-responsive-lg>
+                                        <table class="table table-dark table-striped">
+                                                <thead>
+                                                        <tr class=align-middle>
+                                                                <th style="border-radius:40px 0 0 0;padding-left:0"
+                                                                        scope=col></th>
+                                                                <th class="table-selected text-center"
+                                                                        style=font-weight:900;padding:1.5rem;font-size:1.2rem>
+                                                                        Ambeteco Invest-School</th>
+                                                                <th style=padding-left:1.5rem;opacity:.8>
+                                                                        InvestorsUndergound</th>
+                                                                <th
+                                                                        style="padding-right:1.5rem;opacity:.8;border-radius:0 40px 0 0">
+                                                                        ThomasKralow</th>
+                                                        </tr>
+                                                </thead>
+                                                <tbody>
+                                                        <tr class=align-middle>
+                                                                <th scope=row>Lezioni gratuite / Prova</th>
+                                                                <td class="table-selected text-center">
+                                                                        <div class="mb-3 mt-3"><span
+                                                                                        class="plus-badge checkmark-main">✓</span>
+                                                                        </div> Lezione assolutamente gratuita per tutti
+                                                                </td>
+                                                                <td class=text-center><span class=minus-badge>-</span>
+                                                                </td>
+                                                                <td class=text-center><span class=minus-badge>-</span>
+                                                                </td>
+                                                        </tr>
+                                                        <tr class=align-middle>
+                                                                <th scope=row>Mentore personale</th>
+                                                                <td class="table-selected text-center">
+                                                                        <div class="mb-3 mt-3"><span
+                                                                                        class="plus-badge checkmark-main">✓</span>
+                                                                        </div> Avete un tutor personale con cui
+                                                                        discutere della vostra formazione.
+                                                                </td>
+                                                                <td class=text-center><span class=minus-badge>-</span>
+                                                                </td>
+                                                                <td class=text-center><span class=plus-badge>✓</span>
+                                                                </td>
+                                                        </tr>
+                                                        <tr class=align-middle>
+                                                                <th scope=row>Contatto diretto con l'autore del corso
+                                                                </th>
+                                                                <td class="table-selected text-center">
+                                                                        <div class="mb-3 mt-3"><span
+                                                                                        class="plus-badge checkmark-main">✓</span>
+                                                                        </div> Il contatto con il fondatore della scuola
+                                                                        e l'autore del corso è diretto.
+                                                                </td>
+                                                                <td class=text-center><span class=minus-badge>-</span>
+                                                                </td>
+                                                                <td class=text-center><span class=plus-badge>✓</span>
+                                                                </td>
+                                                        </tr>
+                                                        <tr class=align-middle>
+                                                                <th scope=row>Consultazione individuale con l'autore del
+                                                                        corso</th>
+                                                                <td class="table-selected text-center">
+                                                                        <div class="mb-3 mt-3"><span
+                                                                                        class="plus-badge checkmark-main">✓</span>
+                                                                        </div> Sessione individuale di domande e
+                                                                        risposte con il fondatore della scuola e
+                                                                        l'autore del corso.
+                                                                </td>
+                                                                <td class=text-center><span class=minus-badge>-</span>
+                                                                </td>
+                                                                <td class=text-center><span class=minus-badge>-</span>
+                                                                </td>
+                                                        </tr>
+                                                        <tr class=align-middle>
+                                                                <th scope=row>Scambi oggetto di studio</th>
+                                                                <td class="table-selected text-center">
+                                                                        <div class="mb-3 mt-3"><span
+                                                                                        class="plus-badge checkmark-main">✓</span>
+                                                                        </div> Verranno studiate le seguenti 5 borse:
+                                                                        NYSE, NASDAQ, AMEX, PINK (OTC), LSE.
+                                                                </td>
+                                                                <td class=text-center><span class=plus-badge
+                                                                                style=background:#8f8f8f;opacity:.7>1</span>
+                                                                </td>
+                                                                <td class=text-center><span class=plus-badge
+                                                                                style=background:#8f8f8f;opacity:.7>1</span>
+                                                                </td>
+                                                        </tr>
+                                                        <tr class=align-middle>
+                                                                <th scope=row>Controllo dei compiti</th>
+                                                                <td class="table-selected text-center">
+                                                                        <div class="mb-3 mt-3"><span
+                                                                                        class="plus-badge checkmark-main">✓</span>
+                                                                        </div> Il vostro tutor personale controllerà i
+                                                                        vostri compiti e risponderà alle vostre domande.
+                                                                </td>
+                                                                <td class=text-center><span class=minus-badge>-</span>
+                                                                </td>
+                                                                <td class=text-center><span class=plus-badge>✓</span>
+                                                                </td>
+                                                        </tr>
+                                                        <tr class=align-middle>
+                                                                <th scope=row>Mantenere i contatti con gli ex alunni
+                                                                        della scuola</th>
+                                                                <td class="table-selected text-center">
+                                                                        <div class="mb-3 mt-3"><span
+                                                                                        class="plus-badge checkmark-main">✓</span>
+                                                                        </div> Potrete contattare il vostro tutor anche
+                                                                        dopo aver completato il corso.
+                                                                </td>
+                                                                <td class=text-center><span class=minus-badge>-</span>
+                                                                </td>
+                                                                <td class=text-center><span class=minus-badge>-</span>
+                                                                </td>
+                                                        </tr>
+                                                        <tr class=align-middle>
+                                                                <th scope=row>Certificato</th>
+                                                                <td class="table-selected text-center">
+                                                                        <div class="mb-3 mt-3"><span
+                                                                                        class="plus-badge checkmark-main">✓</span>
+                                                                        </div> Rilasciamo un certificato personale
+                                                                        firmato dall'autore e fondatore della scuola.
+                                                                </td>
+                                                                <td class=text-center><span class=minus-badge>-</span>
+                                                                </td>
+                                                                <td class=text-center><span class=minus-badge>-</span>
+                                                                </td>
+                                                        </tr>
+                                                        <tr class=align-middle>
+                                                                <th scope=row>Esame / Test di uscita</th>
+                                                                <td class="table-selected text-center">
+                                                                        <div class="mb-3 mt-3"><span
+                                                                                        class="plus-badge checkmark-main">✓</span>
+                                                                        </div> Opzionalmente, è possibile sostenere un
+                                                                        test finale e ricevere un ulteriore certificato
+                                                                        di completamento del programma di formazione.
+                                                                </td>
+                                                                <td class=text-center><span class=minus-badge>-</span>
+                                                                </td>
+                                                                <td class=text-center><span class=plus-badge>✓</span>
+                                                                </td>
+                                                        </tr>
+                                                        <tr class="align-middle text-center">
+                                                                <th style="border-radius:0 0 0 40px;padding-top:1rem;padding-bottom:1rem"
+                                                                        scope=row>Prezzo</th>
+                                                                <td class=table-selected><span
+                                                                                style=font-weight:bold;font-size:1.3rem>
+                                                                                Da 27.00 a 100 dollari </span></td>
+                                                                <td>$997</td>
+                                                                <th style="border-radius:0 0 40px 0;font-weight:100">
+                                                                        $899
+                                                        </tr>
+                                                </tbody>
+                                        </table>
+                                </div>
+                                <p>Informazioni tratte da fonti pubbliche al 2022. Le informazioni su altri corsi sono
+                                        soggette a modifiche da parte dei rispettivi proprietari. Alcune delle opzioni
+                                        sopra elencate sono disponibili solo nel pacchetto "Deluxe".</p>
+                        </div>
+                        <div class="col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto" id=pricing-block
+                                style=margin-top:10vw>
+                                <div class=row style=align-items:end>
+                                        <div class="pricing-card col-12 col-lg" style=height:fit-content>
+                                                <h4 class=text-center>Econom</h4>
+                                                <h1 class="text-center mt-2" style=font-weight:300><s>$42.00</s> <span
+                                                                style="text-shadow:0 0 10px white;font-weight:700">$27.00</span>
+                                                </h1>
+                                                <h2 class="text-center mb-4">You save <span
+                                                                style="font-weight:500;text-shadow:0 0 10px white">35%</span>
+                                                </h2>
+                                                <hr>
+                                                <p><span class=dot>•</span> Accesso completo al corso, muoversi da soli
+                                                        come si desidera <br></p>
+                                                <p><span class=dot>•</span> Ideale per coloro che amano risolvere i
+                                                        problemi da soli. <br></p>
+                                                <p><span class=dot>•</span> Nessun compito a casa, nessuna consulenza -
+                                                        solo accesso al corso per l'autoapprendimento senza feedback
+                                                        <br></p><a class="pricing-btn box-btn col-12 mt-4"
+                                                        href=/trading/buy/econom> Acquistatelo ora </a>
+                                        </div>
+                                        <div class="pricing-card col-12 col-lg" style=height:fit-content>
+                                                <h4 class=text-center>Standart</h4>
+                                                <h1 class="text-center mt-2" style=font-weight:300><s>$72.00</s> <span
+                                                                style="text-shadow:0 0 10px white;font-weight:700">$47.00</span>
+                                                </h1>
+                                                <h2 class="text-center mb-4">You save <span
+                                                                style="font-weight:500;text-shadow:0 0 10px white">35%</span>
+                                                </h2>
+                                                <hr>
+                                                <p><span class=dot>•</span> Accesso completo al corso <br></p>
+                                                <p><span class=dot>•</span> Riceverete le lezioni tre volte a settimana
+                                                        in formato testo, all'indirizzo e-mail specificato <br></p>
+                                                <p><span class=dot>•</span> Una sessione individuale di domande e
+                                                        risposte con l'autore del corso - potrete porre tutte le domande
+                                                        che avete avuto durante il corso. <br></p>
+                                                <p><span class=dot>•</span> Compiti a casa - da completare e rivedere a
+                                                        piacimento <br></p><a class="pricing-btn box-btn col-12 mt-4"
+                                                        href=/trading/buy/standart> Acquistalo ora </a>
+                                        </div>
+                                        <div class="pricing-card col-12 col-lg"
+                                                style="background:rgba(49,169,193,.13);border:3px solid #74c3f3;box-shadow:0 0 60px -15px #4e8baa,0 0 40px rgba(49,159,210,.99)"
+                                                id=deluxe-card>
+                                                <h4 class=text-center style=font-weight:500>Deluxe</h4>
+                                                <h1 class="text-center mt-2" style=font-weight:300><s>$150.00</s> <span
+                                                                style="text-shadow:0 0 10px white;font-weight:700">$99.99</span>
+                                                </h1>
+                                                <h2 class="text-center mb-4">You save <span
+                                                                style="font-weight:500;text-shadow:0 0 10px white">34%</span>
+                                                </h2>
+                                                <hr><span style=font-weight:300>
+                                                        <p><span class=dot>•</span> Accesso completo al corso <br></p>
+                                                        <p><span class=dot>•</span> Riceverete le lezioni tre volte alla
+                                                                settimana in formato testo, all'indirizzo e-mail
+                                                                specificato. <br></p>
+                                                        <p><span class=dot>•</span> Una sessione individuale di domande
+                                                                e risposte con l'autore del corso - potrete porre tutte
+                                                                le domande che avete avuto durante il corso. <br></p>
+                                                        <p><span class=dot>•</span> Controllo dei compiti <br></p>
+                                                        <p><span class=dot>•</span> Tutor personale <br></p>
+                                                        <p><span class=dot>•</span> Contatto diretto con l'autore del
+                                                                corso <br></p>
+                                                        <p><span class=dot>•</span> Mantenimento dei contatti dopo la
+                                                                fine del corso <br></p>
+                                                        <p><span class=dot>•</span> Certificato personale con la firma
+                                                                del fondatore della scuola <br></p>
+                                                        <p><span class=dot>•</span> Test finale opzionale con
+                                                                certificato aggiuntivo <br></p>
+                                                </span><a class="pricing-btn box-btn col-12 mt-4"
+                                                        href=/trading/buy/deluxe> Acquistalo ora </a>
+                                        </div>
+                                </div>
+                        </div><a href=/enroll/it#econom>
+                                <div class="col-12 col-sm-8 col-md-7 box-btn mx-auto mt-5 text-center"
+                                        style=padding-top:15px!important;padding-bottom:15px!important>Prima lezione
+                                        gratuita [Econom]</div>
+                        </a><a href=/enroll/it#standart>
+                                <div class="col-12 col-sm-8 col-md-7 box-btn mx-auto mt-4 text-center"
+                                        style=padding-top:15px!important;padding-bottom:15px!important>Prima lezione
+                                        gratuita [Standart]</div>
+                        </a><a href=/enroll/it#deluxe>
+                                <div class="col-12 col-sm-8 col-md-7 box-btn mx-auto mt-4 text-center"
+                                        style=padding-top:15px!important;padding-bottom:15px!important>Prima lezione
+                                        gratuita [Deluxe]</div>
+                        </a>
+                        <h1 class="text-center mb-4" style=margin-top:7vw>Cosa dicono i nostri studenti</h1>
+                        <div class="row row-cols-1 row-cols-lg-2 align-items-center">
+                                <div class=p-3>
+                                        <div class="review box mb-5"><span class="mb-3 score">8.5/10</span>
+                                                <h3>Украина, Одесса | Євгенія С.</h3>
+                                                <h4>Все чудово. Мені сподобалося книга ордерів, тепер я навчилася і можу
+                                                        передбачати недалеке майбутнє акції! Правило про власників
+                                                        компаній працює без винятків! Я вражена. Чуствую себе як oracle
+                                                        😂🤣! Буду всім радити!</h4>
+                                                <h4 class="text-center mt-4"><span
+                                                                class=email>yevgeniya.sotskaya.74@inbox.ru</span></h4>
+                                        </div>
+                                </div>
+                                <div class=p-3>
+                                        <div class="review box mb-5"><span class="mb-3 score">10/10</span>
+                                                <h3>Barselona, España | María López</h3>
+                                                <h4>Hola a todos! Quería decir que el curso es muy chulo! Voy a
+                                                        recomendarlo a todos mis amigos! Gracias, Alex Casa 😊!<br> P.
+                                                        S.<br> Tu español es muy profesional, Alex!<br></h4>
+                                                <h4 class="text-center mt-4"><span
+                                                                class=email>mar******93**@gmail.com</span></h4>
+                                        </div>
+                                </div>
+                                <div class=p-3>
+                                        <div class="review box mb-5"><span class="mb-3 score">10/10</span>
+                                                <h3>USA, Detroit | Ander Josh</h3>
+                                                <h4>I am happy with the learning course, I am really glad that I took
+                                                        it. It was definitely something new for me, even though I am
+                                                        used to working with numbers. When I opened the trading platform
+                                                        for the first time, I was blown away by the amount of data
+                                                        changing in real-time. Literally, every inch of the screen was
+                                                        updating and showing some kind of information. Alex's course
+                                                        helped me understand what to do with this huge amount of
+                                                        information, and now, I even can make decisions based on it!
+                                                        Anyway, my advice for all beginners who want to try trading:
+                                                        keep it slow, and don't be afraid of the fancy trading tools and
+                                                        platforms, you will get used to it after some time, and of
+                                                        course, it will happen much faster if you have a nice mentor
+                                                        like Alex :)</h4>
+                                                <h4 class="text-center mt-4"><span
+                                                                class=email>anderjosh89@aol.com</span></h4>
+                                        </div>
+                                </div>
+                                <div class=p-3>
+                                        <div class="review box mb-5"><span class="mb-3 score">8/10</span>
+                                                <h3>Украина, Киев | ООО "Guardian", Максим Г.</h3>
+                                                <h4>Здравствуйте, хочу порекомендовать этот замечательный курс по
+                                                        трейднгу и инвестированию. Это замечательный пример того, как
+                                                        надо преподавать! Стоит отметить, что манера изложения материала
+                                                        крайне доступна. Большое спасибо за такое прекрасный опыт!
+                                                        Спасибо, Максим.<br></h4>
+                                                <h4 class="text-center mt-4"><span
+                                                                class=email>admi******dian@outlook.com</span></h4>
+                                        </div>
+                                </div>
+                                <div class=p-3>
+                                        <div class="review box mb-5"><span class="mb-3 score">9.5/10</span>
+                                                <h3>Madrid, España | Theo</h3>
+                                                <h4>Alex was very good mentor. this course is very easy to understand.
+                                                        the most interesting part for me was techincal analysis.<br>
+                                                </h4>
+                                                <h4 class="text-center mt-4"><span
+                                                                class=email>off*****th******19*8@gmail.com</span></h4>
+                                        </div>
+                                </div>
+                                <div class=p-3>
+                                        <div class="review box mb-5"><span class="mb-3 score">9/10</span>
+                                                <h3>USA, LA | Владимир</h3>
+                                                <h4>Прекрасный курс. все по делу, без воды. изложено очень доступным
+                                                        языком.<br></h4>
+                                                <h4 class="text-center mt-4"><span
+                                                                class=email>vladimirfedorenko@aol.com</span></h4>
+                                        </div>
+                                </div>
+                                <div class=p-3>
+                                        <div class="review box mb-5"><span class="mb-3 score">20/10!!!</span>
+                                                <h3>USA, Virginia | Jullie Young</h3>
+                                                <h4>It was a really interesting course, I'm so thankful to Alex and his
+                                                        team for creating such a wonderful learning experience! I
+                                                        already opened an account and started making my first trades, I
+                                                        even shorted AMD! Even after completing the course, I keep in
+                                                        touch with Alex, I send him over my trades, and he helps me
+                                                        analyze my mistakes and decisions.<br></h4>
+                                                <h4 class="text-center mt-4"><span
+                                                                class=email>jullie.young@aol.com</span></h4>
+                                        </div>
+                                </div>
+                                <div class=p-3>
+                                        <div class="review box mb-5"><span class="mb-3 score">9/10</span>
+                                                <h3>Canada, Toronto | Elena Kotova</h3>
+                                                <h4>Здравствуйте, я много лет работаю бухгалтером в Канаде. Я решила
+                                                        попробовать себя в новой профессии. Все очень круто и просто.
+                                                        Тут нет понтов и пафосных терминов. Особенно мне понравилась
+                                                        тема "волшебные цифры".<br></h4>
+                                                <h4 class="text-center mt-4"><span
+                                                                class=email>elenka.kotova.75@bk.ru</span></h4>
+                                        </div>
+                                </div>
+                                <div class=p-3>
+                                        <div class="review box mb-5"><span class="mb-3 score">10/10</span>
+                                                <h3>Украина, Днепр | Екатерина M.</h3>
+                                                <h4>Вау!😍😍мне очень понравился курс!!!!😊👍буду рекомендовать своим
+                                                        фоловерам и подружкам!😊👌думала что у меня не получиться но
+                                                        получилось😂❤️<br></h4>
+                                                <h4 class="text-center mt-4"><span class=email>zay****9@ukr.net</span>
+                                                </h4>
+                                        </div>
+                                </div>
+                                <div class=p-3>
+                                        <div class="review box mb-5"><span class="mb-3 score">9/10</span>
+                                                <h3>Bar, Montenegro | Safet K.</h3>
+                                                <h4>First of all, I would like to thank Alex, he is a very professional
+                                                        mentor and trader. I think about taking Alex's advanced course.
+                                                        And, I hope to make some money!<br></h4>
+                                                <h4 class="text-center mt-4"><span
+                                                                class=email>saf*******ic@gmail.com</span></h4>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto" style=margin-top:5vw>
+                                <h1 class="text-center mt-5 mb-3">Vuoi ricevere la prima lezione gratis?</h1>
+                                <h5>Dopo la lezione gratuita, potrai scoprire se ti piace il materiale del corso, lo
+                                        stile di presentazione e se l'apprendimento dell'intero corso è interessante. Se
+                                        vi piace, non dovrete fare altro che pagare le restanti 14 lezioni. Potete farlo
+                                        effettuando un pagamento online direttamente sul nostro sito. Compilate il
+                                        modulo e riceverete immediatamente la prima lezione sulla vostra e-mail.</h5>
+                        </div><a href=/enroll/it#econom>
+                                <div class="col-12 col-sm-8 col-md-7 box-btn mx-auto mt-5 text-center"
+                                        style=padding-top:15px!important;padding-bottom:15px!important>Prima lezione
+                                        gratuita [Econom]</div>
+                        </a><a href=/enroll/it#standart>
+                                <div class="col-12 col-sm-8 col-md-7 box-btn mx-auto mt-4 text-center"
+                                        style=padding-top:15px!important;padding-bottom:15px!important>Prima lezione
+                                        gratuita [Standart]</div>
+                        </a><a href=/enroll/it#deluxe>
+                                <div class="col-12 col-sm-8 col-md-7 box-btn mx-auto mt-4 text-center"
+                                        style=padding-top:15px!important;padding-bottom:15px!important>Prima lezione
+                                        gratuita [Deluxe]</div>
+                        </a>
+                        <div class="col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto" style=margin-top:5vw>
+                                <h1 class="text-center mt-5 mb-3">Siete già pronti ad acquistare il corso?</h1>
+                                <h5>Scegliete il pacchetto giusto e compilate il modulo di iscrizione. Riceverete
+                                        immediatamente la prima lezione nella vostra e-mail.</h5>
+                        </div><a href=#pricing-block>
+                                <div class="col-12 col-sm-8 col-md-7 box-btn mx-auto mt-5 text-center"
+                                        style=padding-top:15px!important;padding-bottom:15px!important>Acquista ora il
+                                        corso</div>
+                        </a>
+                        <div class="col-12 col-sm-11 col-md-10 col-lg-9 col-xl-9 mx-auto" style=margin-top:5vw>
+                                <h1 class="text-center mt-5 mb-3">Avete ancora domande?</h1>
+                                <h5>Potete contattarci inviando un'e-mail a school@Ambeteco.us o utilizzando il pulsante
+                                        "Contattaci" qui sotto.</h5>
+                        </div><a href=/contact-us />
+                        <div class="col-12 col-sm-8 col-md-7 box-btn mx-auto mt-5 text-center"
+                                style=padding-top:15px!important;padding-bottom:15px!important>Contattateci</div> </a>
+                </div>
+                <style>
+                        #footer-bubble {
+                                border: 3px solid #538db0;
+                                border-radius: 50%;
+                                background: rgba(186, 244, 255, .05);
+                                box-shadow: 0 0 60px -15px #4e8baa
+                        }
+
+                        #footer-logo {
+                                position: absolute
+                        }
+
+                        #footer-parent {
+                                margin-top: 10vw;
+                                margin-bottom: 33vw
+                        }
+
+                        #footer {
+                                box-shadow: 0 0 60px -15px #4e8baa;
+                                position: absolute;
+                                border: 3px solid #538db0;
+                                background: rgba(186, 244, 255, .05);
+                                padding: 20px;
+                                border-radius: 90px;
+                                padding-top: 43px;
+                                padding-bottom: 43px;
+                                padding-left: 39px
+                        }
+
+                        #footer a {
+                                text-decoration: none !important;
+                                transition: text-shadow .3s, opacity .3s;
+                                font-weight: 200
+                        }
+
+                        #footer a:hover {
+                                opacity: .9;
+                                text-shadow: 1px 5px 25px white
+                        }
+
+                        @media screen and (max-width:1441px) {
+                                #footer-parent {
+                                        margin-top: 70vw
+                                }
+
+                                #footer {
+                                        padding-top: 1.5rem;
+                                        padding-bottom: 1.5rem;
+                                        top: 1vw;
+                                        left: 50%;
+                                        transform: translateX(-50%);
+                                        width: 83vw
+                                }
+
+                                #footer-bubble {
+                                        left: 50%;
+                                        top: -52vw;
+                                        width: 45vw;
+                                        height: 45vw;
+                                        transform: translateX(-50%);
+                                        position: absolute
+                                }
+
+                                #footer-logo {
+                                        left: 50%;
+                                        top: -43.5vw;
+                                        width: 26.19vw;
+                                        height: 26.19vw;
+                                        transform: translateX(-50%)
+                                }
+
+                                #footer .row {
+                                        padding-left: 1.3vw;
+                                        padding-right: 2vw
+                                }
+
+                                #footer h4 {
+                                        margin-top: 1rem;
+                                        font-size: 1.6rem;
+                                        margin-bottom: 1rem;
+                                        text-align: center;
+                                        line-height: 1.4
+                                }
+
+                                #footer .col {
+                                        padding-left: 3vw;
+                                        padding-right: 3vw
+                                }
+                        }
+
+                        @media screen and (min-width:1441px) {
+                                #footer {
+                                        top: 1vw;
+                                        right: 6vw;
+                                        padding: 2.8vw
+                                }
+
+                                #footer .row {
+                                        padding-left: 1.3vw;
+                                        padding-right: 2vw
+                                }
+
+                                #footer-bubble {
+                                        position: absolute;
+                                        left: 6vw;
+                                        top: -0.4vw;
+                                        width: 14.4vw;
+                                        height: 14.4vw
+                                }
+
+                                #footer-logo {
+                                        left: 9.1vw;
+                                        top: 2.5vw;
+                                        width: 8vw;
+                                        height: 8vw
+                                }
+
+                                #footer .col:nth-child(3) {
+                                        padding-right: 6rem !important
+                                }
+
+                                #footer h4 {
+                                        margin-top: 1rem;
+                                        font-size: 2rem;
+                                        margin-bottom: 1rem;
+                                        line-height: 1.4
+                                }
+
+                                #footer .col {
+                                        padding-left: 3vw;
+                                        padding-right: 3vw
+                                }
+                        }
+                </style>
+                <div id=footer-parent style=position:relative><a href= />
+                        <div id=footer-bubble></div> </a><a href= />
+                        <picture>
+                                <source srcset="static/ambeteco_logo.webp
+        " type=image/webp>
+                                <source srcset="static/ambeteco_logo.png
+        " type=image/png><img alt="Logo of Ambeteco - A new look at software" src="static/ambeteco_logo.png
+        " class=bubble-light height=700 id=footer-logo loading=lazy width=700>
+                        </picture> </a>
+                        <div id=footer>
+                                <div class=row style=white-space:nowrap>
+                                        <div class=col>
+                                                <h4 class=text-breath><a href= />Main</a></h4>
+                                        </div>
+                                        <div class=col>
+                                                <h4 class=text-breath><a href=/contact />Contact us</a></h4>
+                                        </div>
+                                        <div class=col>
+                                                <h4 class=text-breath><a href=/enroll>Enroll</a></h4>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</body>
+
+</html>

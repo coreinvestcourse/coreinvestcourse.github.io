@@ -1,0 +1,899 @@
+<!doctype html>
+<html lang=en>
+
+<head>
+  <meta content="width=device-width,initial-scale=1.0" name=viewport>
+  <meta content="ie=edge" http-equiv=X-UA-Compatible>
+  <meta charset=UTF-8>
+  <link crossorigin=anonymous href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css
+    integrity=sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi rel=stylesheet>
+  <script crossorigin=anonymous integrity=sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3
+    src=https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js></script>
+  <style>
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 200;
+      font-display: swap;
+      src: url(/static/fonts/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 200;
+      font-display: swap;
+      src: url(/static/fonts/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format('woff2');
+      unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 200;
+      font-display: swap;
+      src: url(/static/fonts/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2) format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 200;
+      font-display: swap;
+      src: url(/static/fonts/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 200;
+      font-display: swap;
+      src: url(/static/fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url(/static/fonts/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url(/static/fonts/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format('woff2');
+      unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url(/static/fonts/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2) format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url(/static/fonts/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url(/static/fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(/static/fonts/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(/static/fonts/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format('woff2');
+      unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(/static/fonts/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2) format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(/static/fonts/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(/static/fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url(/static/fonts/JTUSjIg1_i6t8kCHKm459WRhyzbi.woff2) format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url(/static/fonts/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format('woff2');
+      unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url(/static/fonts/JTUSjIg1_i6t8kCHKm459WZhyzbi.woff2) format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url(/static/fonts/JTUSjIg1_i6t8kCHKm459Wdhyzbi.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+    }
+
+    @font-face {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url(/static/fonts/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+    }
+  </style>
+  <script>(function (a, b, c, d, e, f, g) { a[c] = a[c] || function () { (a[c].q = a[c].q || []).push(arguments) }; f = b.createElement(d); f.async = 1; f.src = "https://www.clarity.ms/tag/" + e; g = b.getElementsByTagName(d)[0]; g.parentNode.insertBefore(f, g) })(window, document, "clarity", "script", "e6l2wz8xbe")</script>
+  <script>(function (a, b, c, d, e) { a.gr = a.gr || function () { a.gr.q = a.gr.q || []; a.gr.q.push(arguments) }; d = b.getElementsByTagName(c)[0]; e = b.createElement(c); e.async = true; e.src = "https://app.getreditus.com/gr.js?_ce=90"; d.parentNode.insertBefore(e, d) })(window, document, "script"); gr("track", "pageview")</script>
+  <script>window.addEventListener('DOMContentLoaded', function () { var a = document.createElement("script"); a.type = "application/javascript"; a.src = "https://api.goaffpro.com/loader.js?shop=i1npz3c1nv"; document.body.appendChild(a) })</script>
+  <style>
+    a,
+    body,
+    div,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    li,
+    ol,
+    p,
+    span,
+    ul {
+      font-family: "Montserrat", "Lato", "Raleway", "Roboto", "Open Sans",
+        sans-serif !important
+    }
+  </style>
+  <link href=/static/apple-touch-icon.png rel=apple-touch-icon sizes=180x180>
+  <link href=/static/favicon-32x32.png rel=icon sizes=32x32 type=image/png>
+  <link href=/static/favicon-16x16.png rel=icon sizes=16x16 type=image/png>
+  <link href=/static/site.webmanifest rel=manifest>
+  <script>window.addEventListener("load", function () { setTimeout(function () { const a = document.getElementById("img-background"); const b = document.getElementById("first-bg-img"); const c = 2; oneImgHeight = b.clientHeight; let d = document.body; let e = document.documentElement; let f = Math.max(d.scrollHeight, d.offsetHeight, e.clientHeight, e.scrollHeight, e.offsetHeight); chunks = f / oneImgHeight; secondImg = document.createElement("img"); imgsToLoad = Math.floor(Math.min(chunks, 39)); if (imgsToLoad <= c) { return }; for (let g = c + 1; g < imgsToLoad + 1; g++) { let h = document.createElement('picture'); sourceWebp = createSource(g, 'webp', 'webp'); sourceJpeg = createSource(g, 'jpg', 'jpeg'); let i = document.createElement("img"); i.loading = "lazy"; i.classList.add("bg-img"); i.alt = "Dark background with blue accents with light reflections"; h.appendChild(sourceWebp); h.appendChild(sourceJpeg); h.appendChild(i); i.src = `/static/bgs/7/${g * 1000}.jpg`; a.appendChild(h) } }, 1000) }); function createSource(a, b, c) { let d = document.createElement('source'); d.type = `image/${c}`; d.srcset = `/static/bgs/7/${a * 1000}.${b}`; return d }</script>
+  <style>
+    @keyframes text-breath {
+      0% {
+        text-shadow: 0 0 0 #f5fbfd;
+        filter: brightness(1)
+      }
+
+      50% {
+        text-shadow: 0 0 20px #f5fbfd;
+        filter: brightness(2)
+      }
+
+      100% {
+        text-shadow: 0 0 0 #f5fbfd;
+        filter: brightness(1)
+      }
+    }
+
+    body {
+      background: #031114
+    }
+
+    #img-background img {
+      width: 100%;
+      max-width: 100%;
+      height: auto
+    }
+
+    a,
+    div,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    li,
+    ol,
+    p,
+    span,
+    ul {
+      font-family: "Montserrat", sans-serif !important;
+      font-weight: 100;
+      color: white !important
+    }
+
+    a {
+      text-decoration: none !important
+    }
+
+    #main-container {
+      transition: filter 1s;
+      position: absolute;
+      width: 100%;
+      height: 100%
+    }
+
+    .text-breath {
+      animation: text-breath 4s ease-in-out infinite;
+      background: rgba(0, 67, 81, .2) !important;
+      padding: 4px;
+      padding-left: 10px;
+      padding-right: 10px;
+      box-shadow: 0 0 60px -15px #4e8baa;
+      border-radius: 20px
+    }
+  </style>
+  <style>
+    .box {
+      border: 3px solid #538cb065;
+      border-radius: 40px;
+      background: rgba(186, 244, 255, .13);
+      padding: 20px;
+      backdrop-filter: saturate(1.2);
+      box-shadow: 0 0 60px -15px #4e8baa
+    }
+
+    .title {
+      font-size: 4rem;
+      font-weight: 100;
+      color: white
+    }
+
+    .box-btn {
+      border: 3px solid #538db0 !important;
+      border-radius: 40px !important;
+      background: rgba(186, 244, 255, .13) !important;
+      padding: 7px !important;
+      color: white !important;
+      backdrop-filter: saturate(1.2) !important;
+      font-weight: 300;
+      box-shadow: 0 0 60px -15px #4e8baa;
+      cursor: pointer !important;
+      font-size: 1.7rem !important;
+      transition: filter .5s, background-color .5s
+    }
+
+    .box-btn:hover {
+      filter: brightness(1.2) saturate(1.2);
+      background: rgba(0, 67, 81, .5) !important
+    }
+
+    .v-p {
+      padding-top: 20px !important;
+      padding-bottom: 20px !important
+    }
+
+    .p-6 {
+      padding: 5vw
+    }
+  </style>
+  <link href=/static/box-forms.css rel=stylesheet>
+  <link href=https://www.ambeteco.com/enroll/fr#econom rel=canonical>
+  <meta
+    content="Ambeteco Invest-School: S'inscrire - Econom. École de trading et d'investissement «Ambeteco Invest-School» - Cours d'apprentissage "
+    name=description>
+  <title>Ambeteco Invest-School: Recevir leçons gratuites [Econom]</title>
+</head>
+
+<body class="container-fluid g-0">
+  <style>
+    @keyframes invisible-pane {
+      0% {
+        opacity: 1
+      }
+
+      100% {
+        opacity: 0
+      }
+    }
+
+    @keyframes navigation-pane-close {
+      0% {
+        opacity: 1
+      }
+
+      100% {
+        opacity: 0
+      }
+    }
+
+    @keyframes navigation-pane-open {
+      from {
+        opacity: 0
+      }
+
+      to {
+        opacity: 1
+      }
+    }
+
+    .pn-item {
+      margin-top: 3.5vw;
+      padding: 10px;
+      border: 2px solid rgba(106, 124, 128, .13);
+      border-radius: 30px;
+      position: relative;
+      cursor: pointer;
+      transition: background-color .3s
+    }
+
+    .pn-item:hover {
+      background: rgba(106, 124, 128, .13)
+    }
+
+    .navigation {
+      display: none;
+      backdrop-filter: blur(10px);
+      position: absolute;
+      white-space: nowrap;
+      top: 50vh;
+      left: 50vw;
+      transform: translate(-50%, -50%);
+      transition: opacity .3s
+    }
+
+    .product-item {
+      margin-top: .5vw;
+      padding: 10px;
+      border: 2px solid rgba(106, 124, 128, .13);
+      border-radius: 30px;
+      position: relative;
+      cursor: pointer;
+      transition: background-color .3s, filter .3s
+    }
+
+    .product-item:hover {
+      background: rgba(106, 124, 128, .33);
+      filter: drop-shadow(0px 0 20px #538db0)
+    }
+
+    .top-item {
+      filter: saturate(3) brightness(1.3);
+      background: linear-gradient(to top,
+          rgba(81, 120, 188, .21) 0%,
+          rgba(72, 172, 170, .15) 97%,
+          rgba(72, 172, 170, .15) 100%)
+    }
+
+    .navigation-open {
+      filter: brightness(0.7) blur(20px);
+      user-select: none !important;
+      pointer-events: none !important
+    }
+
+    .invisible-pane {
+      animation: invisible-pane .3s forwards
+    }
+
+    .navigation-pane-close {
+      animation: navigation-pane-close .3s forwards
+    }
+
+    .navigation-pane-open {
+      animation: navigation-pane-open .3s forwards
+    }
+
+    @media screen and (max-width:768px) {
+      .navigation {
+        display: block;
+        width: 90vw !important;
+        padding-top: 13vw;
+        padding-bottom: 13vw
+      }
+
+      .pn-item {
+        margin-top: 14.5vw
+      }
+
+      .navigation img {
+        width: 8vw !important;
+        margin-right: 1.5vw !important
+      }
+    }
+  </style>
+  <script>async function showPane(a) { allPanes = document.getElementsByClassName("navigation"); for (var b of allPanes) { if (b.id != a) { b.classList.add("invisible-pane") } }; await sleep(300); for (var b of allPanes) { if (b.id != a) { b.style.display = "none" } }; targetpane = document.getElementById(a); targetpane.classList.remove("invisible-pane"); targetpane.style.display = "block" } async function hidePane(a) { pane = document.getElementById(a); pane.classList.add("invisible-pane"); await sleep(300); pane.style.display = "none"; pane.classList.remove("invisible-pane") } async function handleNavigationMenuClick(a, b, c) { b.stopPropagation(); if (a.style.display === "none") { hideOnClickOutside(a, c); await showPane(a.id) } else { await hidePane(a.id) } } async function sleep(a) { return new Promise(b => setTimeout(b, a)) } async function hideOnClickOutside(a, b) { const c = async (e) => { if (!a.contains(e.target) && isVisible(a)) { await hidePane(a.id); if (!b) { await showPane("product-navigation") }; if (productNavigation.style.display === "none") { mainContainer = document.getElementById("main-container"); mainContainer.classList.remove("navigation-open") }; d() } }; const d = () => { document.removeEventListener("click", c) }; document.addEventListener("click", c) } const isVisible = a => !!a && !!(a.offsetWidth || a.offsetHeight || a.getClientRects().length); window.addEventListener("DOMContentLoaded", function () { var a = document.getElementById("product-navigation-btn"); productNavigation = document.getElementById("product-navigation"); if (a == null) { return }; a.onclick = function (b) { positionNavigationMenu(productNavigation); handleNavigationMenuClick(productNavigation, b, true) }; selectPageBtn = document.getElementById("select-page-btn"); selectPage = document.getElementById("select-page"); selectPageBtn.onclick = function (b) { handleNavigationMenuClick(selectPage, b, false) }; selectProductBtn = document.getElementById("select-product-btn"); selectProduct = document.getElementById("select-product"); selectProductBtn.onclick = function (b) { handleNavigationMenuClick(selectProduct, b, false) } }); function positionNavigationMenu(a) { mainContainer = document.getElementById("main-container"); mainContainer.classList.add("navigation-open") }</script>
+  <div id=main-container>
+    <div id=img-background style=position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1>
+      <picture>
+        <source srcset=/static/bgs/7/0.webp type=image/webp>
+        <source srcset=/static/bgs/7/0.jpg type=image/jpeg><img
+          alt="Dark background with blue accents with light reflections" height=1000 id=first-bg-img
+          src=/static/bgs/7/0.jpg width=1920>
+      </picture>
+      <picture>
+        <source srcset=/static/bgs/7/1000.webp type=image/webp>
+        <source srcset=/static/bgs/7/1000.jpg type=image/jpeg><img
+          alt="Dark background with blue accents with light reflections" height=1000 loading=lazy
+          src=/static/bgs/7/1000.jpg width=1920>
+      </picture>
+      <picture>
+        <source srcset=/static/bgs/7/2000.webp type=image/webp>
+        <source srcset=/static/bgs/7/2000.jpg type=image/jpeg><img
+          alt="Dark background with blue accents with light reflections" height=1000 loading=lazy
+          src=/static/bgs/7/2000.jpg width=1920>
+      </picture>
+    </div>
+    <style>
+      #nav {
+        background-color: transparent !important;
+        backdrop-filter: saturate(1.1) !important;
+        padding: 2.5vw;
+        border-radius: 150px;
+        box-shadow: 0 0 60px -5px #4e8baa;
+        margin-top: 4vw;
+        z-index: 999;
+        background: linear-gradient(to top,
+            rgba(81, 120, 188, .21) 0%,
+            rgba(72, 172, 170, .15) 97%,
+            rgba(72, 172, 170, .15) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#365178bc', endColorstr='#2648acaa', GradientType=0)
+      }
+
+      .navbar-brand {
+        border: 3px solid #538db0;
+        border-radius: 100%;
+        background: rgba(186, 244, 255, .13);
+        width: 9vw;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        margin-left: 6vw
+      }
+
+      .navbar-brand::before {
+        border-radius: 100%;
+        content: "";
+        box-shadow: 0 0 60px 10px #004a49;
+        mix-blend-mode: soft-light;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%
+      }
+
+      .nav-item {
+        border: 3px solid #538db0;
+        border-radius: 40px;
+        background: rgba(186, 244, 255, .13);
+        padding: 0;
+        cursor: pointer;
+        text-align: center;
+        padding-left: 30px;
+        padding-right: 30px;
+        position: relative;
+        margin-left: .5vw;
+        margin-right: .5vw;
+        transition: filter .5s, background-color .5s
+      }
+
+      .nav-item:hover {
+        filter: brightness(1.2) saturate(1.2);
+        background: rgba(0, 67, 81, .5) !important
+      }
+
+      .nav-item::before {
+        border-radius: 40px;
+        content: "";
+        z-index: -1;
+        box-shadow: 0 0 60px 10px #004a49;
+        mix-blend-mode: soft-light;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%
+      }
+
+      .nav-item a {
+        font-size: 1.6rem;
+        font-weight: 200;
+        margin: 0;
+        padding: 6px;
+        white-space: nowrap;
+        border: none !important
+      }
+
+      #nav-ul {
+        margin-left: 6vw
+      }
+
+      .dropdown-menu {
+        background: rgba(186, 244, 255, .13);
+        border-radius: 40px;
+        padding: 20px;
+        margin-top: 10px !important
+      }
+
+      .dropdown-menu a {
+        font-size: 1.3rem !important
+      }
+
+      .dropdown-item {
+        transition: background-color .5s;
+        border-radius: 30px
+      }
+
+      .dropdown-item:hover {
+        background: rgba(0, 67, 81, .5) !important
+      }
+
+      @media screen and (min-width:1200px) and (max-width:1211px) {
+        .nav-item {
+          margin-top: 1vw;
+          margin-bottom: 1vw
+        }
+      }
+
+      @media screen and (max-width:1199.98px) {
+        #nav {
+          border-radius: 50px
+        }
+
+        .navbar-toggler {
+          position: absolute;
+          top: 14vw;
+          left: 10vw
+        }
+
+        .nav-item {
+          margin-top: 4vw
+        }
+
+        .navbar-brand img {
+          width: 20vw !important;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%)
+        }
+
+        .navbar-brand {
+          margin-right: auto !important;
+          margin-left: auto !important;
+          width: 32vw !important;
+          height: 32vw;
+          position: relative
+        }
+
+        .dropdown-menu {
+          margin-bottom: 6vw !important
+        }
+
+        #product-navigation-btn img {
+          width: 8.5vw !important
+        }
+      }
+
+      @media screen and (min-width:1000px) and (max-width:1211px) {
+        .navbar-brand img {
+          width: 10vw !important
+        }
+
+        .navbar-brand {
+          width: 16vw !important;
+          height: 16vw
+        }
+
+        .navbar-toggler {
+          position: absolute;
+          top: 8vw;
+          left: 10vw
+        }
+      }
+
+      @media screen and (min-width:750px) and (max-width:1001px) {
+        .navbar-brand img {
+          width: 14vw !important
+        }
+
+        .navbar-brand {
+          width: 20vw !important;
+          height: 20vw
+        }
+
+        .navbar-toggler {
+          position: absolute;
+          top: 10vw;
+          left: 10vw
+        }
+      }
+    </style>
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark col-11 col-md-11 mx-auto" id=nav>
+      <div class=container-fluid><a class=navbar-brand href= />
+        <picture>
+          <source srcset="/static/ambeteco_logo.webp
+        " type=image/webp>
+          <source srcset="/static/ambeteco_logo.png
+        " type=image/png><img alt="Logo of Ambeteco - A new look at software" src=/static/ambeteco_logo.png
+            style=max-width:100%;max-height:100%;border-radius:0!important;width:7vw;text-align:center>
+        </picture> </a><button aria-label="Toggle navigation" aria-controls=navbarSupportedContent aria-expanded=false
+          class=navbar-toggler data-bs-target=#navbarSupportedContent data-bs-toggle=collapse type=button><span
+            class=navbar-toggler-icon></span></button>
+        <div class="collapse navbar-collapse" id=navbarSupportedContent>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 row mx-auto" id=nav-ul>
+            <li class="col nav-item"><a class=nav-link href="/">main</a></li>
+                                                <li class="col nav-item"><a class=nav-link href="/contact">contact</a>
+                                                </li>
+                                                <li class="col nav-item"><a class=nav-link href="/enroll">enroll</a>
+                                                </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid g-5 p-5" id=fluid-cont style=margin-bottom:5vw;margin-top:3vw>
+      <style>
+        label,
+        small {
+          display: inline-block
+        }
+      </style>
+      <div class="box col-12 col-md-10 col-lg-7 mx-auto">
+        <h1 class="text-center mt-4">Recevir leçons gratuites</h1>
+        <link href=https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css rel=stylesheet>
+        <form action=# class=mt-3 method=post>
+          <div class="form-group col-12 col-lg-6 mx-auto"><label class="mb-1 ml-3 mt-3" for=name
+              style=font-size:1.5rem>Nom</label><input class=form-control id=name name=name required><label
+              class="mb-1 ml-3 mt-3" for=email style=font-size:1.5rem>Email</label><input class=form-control id=email
+              name=email placeholder=email@email.com required type=email>
+            <p class="mt-2 mb-3">Nous vous enverrons des leçons à cette adresse électronique</p><label class="mb-1 ml-3"
+              for=email style=font-size:1.5rem>Select course language</label><select class="form-control input"
+              id=course-language name=course-language required>
+              <option value=en>English</option>
+              <option value=es>Español (Spanish)</option>
+              <option selected value=fr>Français (French)</option>
+              <option value=uk>Українська (Ukrainian)</option>
+              <option value=ru>Русский (Russian)</option>
+              <option value=sq>Shqip (Albanian)</option>
+              <option value=de>Deutsch (German)</option>
+              <option value=no>Norsk (Norwegian)</option>
+              <option value=da>Dansk (Danish)</option>
+              <option value=sv>Svenska (Swedish)</option>
+              <option value=pt>Português (Portuguese)</option>
+              <option value=pl>Polski (Polish)</option>
+              <option value=it>Italiano (Italian)</option>
+              <option value=fi>Suomi (Finnish)</option>
+              <option value=ar>العربيّة (Arabic)</option>
+              <option value=el>Ελληνικά (Greek)</option>
+              <option value=he>עברית (Hebrew)</option>
+              <option value=ja>日本語 (Japanese)</option>
+              <option value=ko>한국어 (Korean)</option>
+              <option value=lb>Lëtzebuergesch (Luxembourgish)</option>
+              <option value=ms>Bahasa Melayu (Malay)</option>
+              <option value=nl>Nederlands (Dutch)</option>
+              <option value=th>ภาษาไทย (Thai)</option>
+              <option value=tr>Türkçe (Turkish)</option>
+              <option value=zh_hans>简体中文 (Simplified Chinese)</option>
+              <option value=zh_hant>繁體中文 (Traditional Chinese)</option>
+            </select><label class="mb-1 ml-3 mt-3" for=comments
+              style=display:block;font-size:1.5rem>Commentaires</label><textarea placeholder="
+ vous pouvez laisser des commentaires si vous le souhaitez 
+" class=form-control id=comments name=comments style=padding:20px></textarea>
+          </div>
+          <div class="row mx-auto mb-3"><button
+              class="mt-5 box-btn col-12 col-md-3 mx-auto text-center">S'inscrire</button></div>
+        </form>
+      </div>
+    </div>
+    <style>
+      #footer-bubble {
+        border: 3px solid #538db0;
+        border-radius: 50%;
+        background: rgba(186, 244, 255, .05);
+        box-shadow: 0 0 60px -15px #4e8baa
+      }
+
+      #footer-logo {
+        position: absolute
+      }
+
+      #footer-parent {
+        margin-top: 10vw;
+        margin-bottom: 33vw
+      }
+
+      #footer {
+        box-shadow: 0 0 60px -15px #4e8baa;
+        position: absolute;
+        border: 3px solid #538db0;
+        background: rgba(186, 244, 255, .05);
+        padding: 20px;
+        border-radius: 90px;
+        padding-top: 43px;
+        padding-bottom: 43px;
+        padding-left: 39px
+      }
+
+      #footer a {
+        text-decoration: none !important;
+        transition: text-shadow .3s, opacity .3s;
+        font-weight: 200
+      }
+
+      #footer a:hover {
+        opacity: .9;
+        text-shadow: 1px 5px 25px white
+      }
+
+      @media screen and (max-width:1441px) {
+        #footer-parent {
+          margin-top: 70vw
+        }
+
+        #footer {
+          padding-top: 1.5rem;
+          padding-bottom: 1.5rem;
+          top: 1vw;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 83vw
+        }
+
+        #footer-bubble {
+          left: 50%;
+          top: -52vw;
+          width: 45vw;
+          height: 45vw;
+          transform: translateX(-50%);
+          position: absolute
+        }
+
+        #footer-logo {
+          left: 50%;
+          top: -43.5vw;
+          width: 26.19vw;
+          height: 26.19vw;
+          transform: translateX(-50%)
+        }
+
+        #footer .row {
+          padding-left: 1.3vw;
+          padding-right: 2vw
+        }
+
+        #footer h4 {
+          margin-top: 1rem;
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
+          text-align: center;
+          line-height: 1.4
+        }
+
+        #footer .col {
+          padding-left: 3vw;
+          padding-right: 3vw
+        }
+      }
+
+      @media screen and (min-width:1441px) {
+        #footer {
+          top: 1vw;
+          right: 6vw;
+          padding: 2.8vw
+        }
+
+        #footer .row {
+          padding-left: 1.3vw;
+          padding-right: 2vw
+        }
+
+        #footer-bubble {
+          position: absolute;
+          left: 6vw;
+          top: 3.6vw;
+          width: 14.4vw;
+          height: 14.4vw
+        }
+
+        #footer-logo {
+          left: 9.1vw;
+          top: 6.5vw;
+          width: 8vw;
+          height: 8vw
+        }
+
+        #footer .col:nth-child(3) {
+          padding-right: 6rem !important
+        }
+
+        #footer h4 {
+          margin-top: 1rem;
+          font-size: 2rem;
+          margin-bottom: 1rem;
+          line-height: 1.4
+        }
+
+        #footer .col {
+          padding-left: 3vw;
+          padding-right: 3vw
+        }
+      }
+    </style>
+    <div id=footer-parent style=position:relative><a href= />
+                        <div id=footer-bubble></div> </a><a href= />
+                        <picture>
+                                <source srcset="static/ambeteco_logo.webp
+        " type=image/webp>
+                                <source srcset="static/ambeteco_logo.png
+        " type=image/png><img alt="Logo of Ambeteco - A new look at software" src="static/ambeteco_logo.png
+        " class=bubble-light height=700 id=footer-logo loading=lazy width=700>
+                        </picture> </a>
+                        <div id=footer>
+                                <div class=row style=white-space:nowrap>
+                                        <div class=col>
+                                                <h4 class=text-breath><a href= />Main</a></h4>
+                                        </div>
+                                        <div class=col>
+                                                <h4 class=text-breath><a href=/contact />Contact us</a></h4>
+                                        </div>
+                                        <div class=col>
+                                                <h4 class=text-breath><a href=/enroll>Enroll</a></h4>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+  </div>
+</body>
+
+</html>
