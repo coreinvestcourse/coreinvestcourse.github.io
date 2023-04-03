@@ -332,6 +332,18 @@
   <link href=https://coreinvest.com/enroll-zh_hans-econom rel=canonical>
   <meta content="CoreInvest Invest-School: 报名 - Econom. 交易和投资学校 'CoreInvest Invest-School' - 学习课程 " name=description>
   <title>CoreInvest Invest-School: 免费获取课程 [Econom]</title>
+<script>
+window.addEventListener('DOMContentLoaded', function () {
+        let packageInpt = document.getElementById('package');
+        let packageName = window.location.hash.slice(1);
+
+        if (packageName) {
+                packageInpt.value = packageName;
+        } else {
+                packageInpt.value = 'not_set';
+        }
+});
+</script>
 </head>
 
 <body class="container-fluid g-0">
@@ -695,6 +707,7 @@
           <input type="hidden" name="accessKey" value="5abb5bdf-829a-4a81-8708-243dbdba22aa">
           <input type="hidden" name="subject" value="Trading Course Enrollment" />
           <input type="hidden" name="redirectTo" value="https://coreinvest.com">
+<input type="hidden" name="$package" value="none" id="package">
           <div class="form-group col-12 col-lg-6 mx-auto"><label class="mb-1 ml-3 mt-3" for=name
               style=font-size:1.5rem>名称</label><input class=form-control id=name name=name required><label
               class="mb-1 ml-3 mt-3" for=email style=font-size:1.5rem>Email</label><input class=form-control id=email
