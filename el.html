@@ -373,7 +373,28 @@
         document.body.appendChild(elem);
     });
 </script>
-</head>
+<script id="parityvend-no-code">
+        var parityvendScript = document.createElement("script");
+        parityvendScript.onload = function () {
+                parityvendUpdateConfig({
+                        design: "glass/light",
+                        apiKey: "axVXOLgHd0Uc9QN8aZF",
+                });
+                parityvendLoad();
+        };
+        parityvendScript.src = "https://api.parityvend.com/no-code-latest.js";
+        document.head.appendChild(parityvendScript);
+</script>
+<style>
+        .parityvend-banner {
+                margin-top: 0;
+                position: fixed;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 20px;
+                z-index: 2147483647;
+        }
+</style></head>
 
 <body class="container-fluid g-0">
         <style>
