@@ -210,10 +210,13 @@
         sans-serif !important
     }
   </style>
-  <link href=/static/apple-touch-icon.png rel=apple-touch-icon sizes=180x180>
-  <link href=/static/favicon-32x32.png rel=icon sizes=32x32 type=image/png>
-  <link href=/static/favicon-16x16.png rel=icon sizes=16x16 type=image/png>
-  <link href=/static/site.webmanifest rel=manifest>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
   <script>window.addEventListener("load", function () { setTimeout(function () { const a = document.getElementById("img-background"); const b = document.getElementById("first-bg-img"); const c = 2; oneImgHeight = b.clientHeight; let d = document.body; let e = document.documentElement; let f = Math.max(d.scrollHeight, d.offsetHeight, e.clientHeight, e.scrollHeight, e.offsetHeight); chunks = f / oneImgHeight; secondImg = document.createElement("img"); imgsToLoad = Math.floor(Math.min(chunks, 39)); if (imgsToLoad <= c) { return }; for (let g = c + 1; g < imgsToLoad + 1; g++) { let h = document.createElement('picture'); sourceWebp = createSource(g, 'webp', 'webp'); sourceJpeg = createSource(g, 'jpg', 'jpeg'); let i = document.createElement("img"); i.loading = "lazy"; i.classList.add("bg-img"); i.alt = "Dark background with blue accents with light reflections"; h.appendChild(sourceWebp); h.appendChild(sourceJpeg); h.appendChild(i); i.src = `/static/bgs/7/${g * 1000}.jpg`; a.appendChild(h) } }, 1000) }); function createSource(a, b, c) { let d = document.createElement('source'); d.type = `image/${c}`; d.srcset = `/static/bgs/7/${a * 1000}.${b}`; return d }</script>
   <style>
     @keyframes text-breath {
